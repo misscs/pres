@@ -1,13 +1,19 @@
 {% extends "pres.j2" %}
+{% import "slides/_macros.j2" as pres %}
+
 
 {% block styles %}
   {{ static.css('../static/css/', 'sample.css') }}
 {% endblock %}
 
+{% block data_talk %}sample{% endblock %}
+
 {% block pres %}
-  {% set talk='sample' %}
-  {% set slides = ['title', 'text', 'code'] %}
-  {% include "slides/_loop.j2" %}
+  {{ pres.loop(
+     talk='sample',
+     slides = ['code', 'text', 'code'],
+     dev=False
+  )}}
 {% endblock %}
 
 {% block js %}
