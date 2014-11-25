@@ -1,0 +1,26 @@
+{% extends "pres.j2" %}
+{% import "slides/_macros.j2" as pres %}
+
+{% block styles %}
+  {{ static.css('../static/css/', ['map-magic/slides.css']) }}
+  {{ static.css('../static/css/', ['map-magic/buttons.css']) }}
+{% endblock %}
+
+{% block data_talk %}revolution{% endblock %}
+
+{% block pres %}
+  {{ pres.loop(
+     talk='revolution',
+     slides = [
+      'quote_revolutions',
+      'text',
+      'code',
+      'title'
+    ],
+     dev=False
+  )}}
+{% endblock %}
+
+{% block js %}
+  {{ static.js() }}
+{% endblock %}
