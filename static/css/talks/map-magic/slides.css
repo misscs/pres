@@ -2,12 +2,24 @@
 Error: "gray" is not a color for `tint'
         on line 30 of /Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/accoutrement-1.0.0.beta.7/stylesheets/accoutrement/_color.scss
         from line 5 of /Users/cs/Projects/presentations/pres/source/sass/base/_base.scss
-        from line 5 of /Users/cs/Projects/presentations/pres/source/sass/screen.scss
+        from line 4 of /Users/cs/Projects/presentations/pres/source/sass/talks/map-magic/slides.scss
+
+25:   color: color(base (rgba: .5));
+26: 
+27:   .slidewrap {
+28:     @include display-flex;
+29:     @include justify-content(center);
+30:   }
+31: 
+32:   .crumb-active {
+33:     color: color(accent);
+34:     font-weight: bold;
+35:   }
 
 Backtrace:
 /Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/accoutrement-1.0.0.beta.7/stylesheets/accoutrement/_color.scss:30
 /Users/cs/Projects/presentations/pres/source/sass/base/_base.scss:5
-/Users/cs/Projects/presentations/pres/source/sass/screen.scss:5
+/Users/cs/Projects/presentations/pres/source/sass/talks/map-magic/slides.scss:4
 /Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:303:in `reformat_argument_error'
 /Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:146:in `rescue in _perform'
 /Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:123:in `_perform'
@@ -121,4 +133,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: \"gray\" is not a color for `tint'\A         on line 30 of /Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/accoutrement-1.0.0.beta.7/stylesheets/accoutrement/_color.scss\A         from line 5 of /Users/cs/Projects/presentations/pres/source/sass/base/_base.scss\A         from line 5 of /Users/cs/Projects/presentations/pres/source/sass/screen.scss"; }
+  content: "Error: \"gray\" is not a color for `tint'\A         on line 30 of /Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/accoutrement-1.0.0.beta.7/stylesheets/accoutrement/_color.scss\A         from line 5 of /Users/cs/Projects/presentations/pres/source/sass/base/_base.scss\A         from line 4 of /Users/cs/Projects/presentations/pres/source/sass/talks/map-magic/slides.scss\A \A 25:   color: color(base (rgba: .5));\A 26: \A 27:   .slidewrap {\A 28:     @include display-flex;\A 29:     @include justify-content(center);\A 30:   }\A 31: \A 32:   .crumb-active {\A 33:     color: color(accent);\A 34:     font-weight: bold;\A 35:   }"; }
