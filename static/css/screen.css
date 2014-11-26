@@ -1,124 +1,627 @@
-/*
-Error: "gray" is not a color for `tint'
-        on line 30 of /Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/accoutrement-1.0.0.beta.7/stylesheets/accoutrement/_color.scss
-        from line 5 of /Users/cs/Projects/presentations/pres/source/sass/base/_base.scss
-        from line 5 of /Users/cs/Projects/presentations/pres/source/sass/screen.scss
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
-Backtrace:
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/accoutrement-1.0.0.beta.7/stylesheets/accoutrement/_color.scss:30
-/Users/cs/Projects/presentations/pres/source/sass/base/_base.scss:5
-/Users/cs/Projects/presentations/pres/source/sass/screen.scss:5
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:303:in `reformat_argument_error'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:146:in `rescue in _perform'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:123:in `_perform'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/functions.rb:585:in `perform'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/functions.rb:2181:in `call'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:140:in `_perform'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:458:in `visit_variable'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:289:in `block (2 levels) in visit_if'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:289:in `map'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:289:in `block in visit_if'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:288:in `visit_if'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:240:in `block (3 levels) in visit_each'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:240:in `map'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:240:in `block (2 levels) in visit_each'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:232:in `map'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:232:in `block in visit_each'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:231:in `visit_each'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:248:in `block (3 levels) in perform_sass_fn'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:248:in `each'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:248:in `block (2 levels) in perform_sass_fn'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:247:in `catch'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:247:in `block in perform_sass_fn'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:84:in `perform_arguments'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:244:in `perform_sass_fn'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/funcall.rb:131:in `_perform'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:458:in `visit_variable'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:315:in `map'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:88:in `block in with_import'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:88:in `with_import'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:315:in `map'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:88:in `block in with_import'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:88:in `with_import'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/tree/root_node.rb:20:in `render'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/engine.rb:268:in `render'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:329:in `block in watch'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/adapter.rb:254:in `call'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/sass-3.4.3/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: \"gray\" is not a color for `tint'\A         on line 30 of /Users/cs/.rbenv/versions/2.0.0-p451/lib/ruby/gems/2.0.0/gems/accoutrement-1.0.0.beta.7/stylesheets/accoutrement/_color.scss\A         from line 5 of /Users/cs/Projects/presentations/pres/source/sass/base/_base.scss\A         from line 5 of /Users/cs/Projects/presentations/pres/source/sass/screen.scss"; }
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.alt-text,
+.is-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+a:link, a:visited {
+  color: #0099cc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover, a:focus, a:active {
+  color: #ff0080;
+}
+
+.head {
+  font-size: 2.4375rem;
+  line-height: 3.125rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+[data-icon] {
+  font-family: "pres";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-icon]:before {
+  content: attr(data-icon);
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../fonts/sans/sourcesanspro-light-webfont.woff?1416777669') format("woff"), url('../fonts/sans/sourcesanspro-light-webfont.ttf?1416777669') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../fonts/sans/sourcesanspro-lightitalic-webfont.woff?1416777669') format("woff"), url('../fonts/sans/sourcesanspro-lightitalic-webfont.ttf?1416777669') format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../fonts/sans/sourcesanspro-bold-webfont.woff?1416777669') format("woff"), url('../fonts/sans/sourcesanspro-bold-webfont.ttf?1416777669') format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceSansPro";
+  src: url('../fonts/sans/sourcesanspro-bolditalic-webfont.woff?1416777669') format("woff"), url('../fonts/sans/sourcesanspro-bolditalic-webfont.ttf?1416777669') format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  src: url('../fonts/code/sourcecodepro-regular-webfont.woff?1416777669') format("woff"), url('../fonts/code/sourcecodepro-regular-webfont.ttf?1416777669') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  src: url('../fonts/code/sourcecodepro-bold-webfont.woff?1416777669') format("woff"), url('../fonts/code/sourcecodepro-bold-webfont.ttf?1416777669') format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BaskervilleAmp";
+  src: url('../fonts/amp/Baskerville-amp-webfont.woff?1416777669') format("woff"), url('../fonts/amp/Baskerville-amp-webfont.ttf?1416777669') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pres";
+  src: url('../fonts/icons/pres.woff?1416777669') format("woff"), url('../fonts/icons/pres.ttf?1416777669') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-family: SourceSansPro, "Helvetica Neue", Helvetica, Arial, sans-serif, sans-serif;
+}
+
+pre, code {
+  font-family: SourceCodePro, Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+}
+
+.amp {
+  font-family: BaskervilleAmp;
+}
+
+html {
+  font-size: 200%;
+  line-height: 1.25em;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[data-icon='compass']:before {
+  content: "";
+}
+
+[data-icon='susy']:before {
+  content: "";
+}
+
+[data-icon='oddbird']:before {
+  content: "";
+}
+
+[data-icon='warning']:before {
+  content: "";
+}
+
+[data-icon='cancel']:before {
+  content: "";
+}
+
+[data-icon='close']:before {
+  content: "";
+}
+
+[data-icon='checkmark']:before {
+  content: "";
+}
+
+[data-icon='minus']:before {
+  content: "";
+}
+
+[data-icon='plus']:before {
+  content: "";
+}
+
+[data-icon='twitter']:before {
+  content: "";
+}
+
+[data-icon='github']:before {
+  content: "";
+}
+
+html {
+  background: #fafafa;
+  color: #1f0b1c;
+  text-shadow: rgba(250, 250, 250, 0.5) 0 1px 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.amp {
+  font-weight: normal;
+  font-style: normal;
+}
+
+b {
+  color: #ff0080;
+}
+
+.slide {
+  -moz-transition: all 150ms;
+  -o-transition: all 150ms;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+  counter-increment: slide;
+  float: left;
+  height: 100%;
+  margin-right: -1000%;
+  opacity: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 1.25rem;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
+[id^="toggle-slide-"] {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+[id^="toggle-slide-"]:checked + .slide {
+  opacity: 1;
+  z-index: 100;
+}
+
+.credit {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  background: rgba(250, 250, 250, 0.5);
+  bottom: 0.625rem;
+  font-weight: bold;
+  padding: 0.625rem 0.625rem;
+  position: absolute;
+  left: 0.625rem;
+}
+
+.prev,
+.next {
+  -webkit-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 1.96875rem;
+  line-height: 2.5rem;
+  -moz-transition: opacity 300ms;
+  -o-transition: opacity 300ms;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+  background: rgba(0, 153, 204, 0.25);
+  bottom: 0;
+  color: rgba(250, 250, 250, 0.5);
+  cursor: pointer;
+  opacity: 0;
+  padding: 0.625rem;
+  position: fixed;
+  top: 0;
+  z-index: 500;
+}
+.prev:hover, .prev:focus, .prev:active,
+.next:hover,
+.next:focus,
+.next:active {
+  opacity: .5;
+}
+
+.prev {
+  left: 0;
+}
+.prev:before {
+  content: "«";
+}
+
+.next {
+  right: 0;
+}
+.next:before {
+  content: "»";
+}
+
+.this {
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  bottom: 0;
+  left: 0;
+  opacity: .25;
+  padding: 0 0.625rem;
+  position: fixed;
+  text-align: left;
+  z-index: 800;
+}
+.this:before {
+  content: counter(slide);
+}
+.this:hover {
+  opacity: .5;
+}
+
+.slidehead {
+  margin-bottom: 0.625rem;
+  text-align: center;
+}
+.slidehead:last-child {
+  margin-bottom: 0;
+}
+.slidehead em {
+  font-style: italic;
+}
+.slidehead strong {
+  font-weight: bold;
+}
+
+.head .amp {
+  font-size: 5.96875rem;
+  line-height: 6.25rem;
+  position: relative;
+  display: inline-block;
+  margin: 0 -.25em;
+  vertical-align: middle;
+  z-index: -1;
+}
+.head b {
+  display: inline-block;
+}
+
+.c {
+  color: #d6cfd5;
+  font-style: italic;
+}
+
+.err {
+  color: red;
+}
+
+.k {
+  font-weight: bold;
+}
+
+.o {
+  color: #d6cfd5;
+}
+
+.cm {
+  color: #d6cfd5;
+  font-style: italic;
+}
+
+.cp {
+  color: #d6cfd5;
+  font-weight: bold;
+}
+
+.c1 {
+  color: #d6cfd5;
+  font-style: italic;
+}
+
+.cs {
+  color: #d6cfd5;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.gd {
+  color: #1f0b1c;
+  background-color: #ffdddd;
+}
+
+.gd .x {
+  color: #1f0b1c;
+  background-color: #ffaaaa;
+}
+
+.ge {
+  font-style: italic;
+}
+
+.gr {
+  color: #aa0000;
+}
+
+.gh {
+  color: #d6cfd5;
+}
+
+.gi {
+  color: #1f0b1c;
+  background-color: #ddffdd;
+}
+
+.gi .x {
+  color: #1f0b1c;
+  background-color: #aaffaa;
+}
+
+.go {
+  color: #888888;
+}
+
+.gp {
+  color: #555555;
+}
+
+.gs {
+  font-weight: bold;
+}
+
+.gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+.gt {
+  color: #aa0000;
+}
+
+.kc {
+  font-weight: bold;
+}
+
+.kd {
+  font-weight: bold;
+}
+
+.kn {
+  font-weight: bold;
+}
+
+.kp {
+  font-weight: bold;
+}
+
+.kr {
+  font-weight: bold;
+}
+
+.kt {
+  color: #004c66;
+  font-weight: bold;
+}
+
+.m {
+  color: #0099cc;
+}
+
+.s {
+  color: #ff0080;
+}
+
+.n {
+  color: #1f0b1c;
+}
+
+.na {
+  color: #0099cc;
+}
+
+.nb {
+  color: #ff0080;
+}
+
+.nc {
+  color: #004c66;
+  font-weight: bold;
+}
+
+.no {
+  color: #0099cc;
+}
+
+.ni {
+  color: #ff0080;
+}
+
+.ne {
+  color: #ff0080;
+  font-weight: bold;
+}
+
+.nf {
+  color: #ff0080;
+  font-weight: bold;
+}
+
+.nn {
+  color: #d6cfd5;
+}
+
+.nt {
+  color: #004c66;
+}
+
+.nv {
+  color: #ff0080;
+}
+
+.ow {
+  font-weight: bold;
+}
+
+.w {
+  color: #bbbbbb;
+}
+
+.mf {
+  color: #0099cc;
+}
+
+.mh {
+  color: #0099cc;
+}
+
+.mi {
+  color: #0099cc;
+}
+
+.mo {
+  color: #0099cc;
+}
+
+.sb {
+  color: #ff0080;
+}
+
+.sc {
+  color: #ff0080;
+}
+
+.sd {
+  color: #ff0080;
+}
+
+.s2 {
+  color: #ff0080;
+}
+
+.se {
+  color: #ff0080;
+}
+
+.sh {
+  color: #ff0080;
+}
+
+.si {
+  color: #ff0080;
+}
+
+.sx {
+  color: #ff0080;
+}
+
+.sr {
+  color: #009926;
+}
+
+.s1 {
+  color: #ff0080;
+}
+
+.ss {
+  color: #990073;
+}
+
+.bp {
+  color: #d6cfd5;
+}
+
+.vc {
+  color: #0099cc;
+}
+
+.vg {
+  color: #0099cc;
+}
+
+.vi {
+  color: #0099cc;
+}
+
+.il {
+  color: #0099cc;
+}
+
+.gc {
+  color: #999;
+  background-color: #EAF2F5;
+}

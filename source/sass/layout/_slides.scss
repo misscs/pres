@@ -1,7 +1,7 @@
 // Map Magic Slides
 // ================
 
-@import "../../base/base";
+@import "base/base";
 
 %vertical-center {
   @include display-flex;
@@ -175,10 +175,6 @@ $btn-bread:
   }
 }
 
-.slide {
-  @include background(image-url('rainish.svg') no-repeat scroll 150% 250%);
-  @include background-size(50% auto);
-}
 
 .two-up {
   @include align-items(stretch);

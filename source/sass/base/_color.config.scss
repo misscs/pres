@@ -2,16 +2,17 @@
 // ============
 
 $colors: (
-  'purple': (hsla(309, 46%, 14%, 1)),
+  'purple': (hsl(309, 46%, 14%)),
 
+  'gray': 'purple' (tint: 80%),
   'blue': hsl(195, 100%, 40%),
   'orange': hsl(24, 100%, 50%),
   'green': hsl(75, 100%, 50%),
   'pink': hsl(330, 100%, 50%),
   'red': hsl(0, 100%, 50%),
 
-  light: 'gray' (tint: 40%),
-  base: 'gray' (shade: 40%),
+  light: 'purple' (tint: 40%),
+  base: 'purple' (shade: 40%),
   alt: 'blue',
   accent: 'pink',
   stop: red,
@@ -21,7 +22,7 @@ $colors: (
 
   back: hsl(0, 0%, 98%),
   shadow: back (rgba: .5),
-  border: 'gray',
+  border: 'purple',
 );
 
 $contrasted-dark-default: color(light);
