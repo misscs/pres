@@ -1,0 +1,10 @@
+{% extends "slides/_blank.j2" %}
+
+{% block slide %}
+<header class="slidehead">
+  <blockquote>{% block quote %}{% endblock %}</blockquote>
+  {% block cite -%}
+  <cite>{% block author %}{% endblock %}</cite>
+  {%- endblock %}
+</header>
+{% endblock %}
