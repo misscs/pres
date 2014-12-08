@@ -2,8 +2,9 @@
 
 {% block pre %}{{ slide.pre(this, focus) }}{% endblock %}
 
-<div class="slidewrap">
-  {% block slide %}{% endblock %}
+<div class="slidewrap {% block slide_classes %}{% endblock %}">
+  {% block slide %}
+  {% endblock %}
 </div>
 
 {% block post %}{{ slide.post(this, prev, next) }}{% endblock %}

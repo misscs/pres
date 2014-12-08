@@ -1,6 +1,7 @@
-{# Slide #}
+{% import "utility.macros.j2" as utility %}
 
-{% macro pre(name, focus) -%}
+
+{% macro pre(name, focus, slide_classes=none) -%}
   <input type="radio" id="toggle-slide-{{ name }}" name="slide-toggles" {% if focus %}checked autofocus{% endif %} />
   <section class="slide" data-toggle="{{ name }}">
 {%- endmacro %}
