@@ -1,0 +1,21 @@
+{% extends "slides/_default.j2" %}
+
+{% import "utility.macros.j2" as u %}
+
+
+{% block h1 %}<a href="http://www.behaviormodel.org/">Fogg Behavior Model</a>{% endblock %}
+{% block h2 %}
+  {{ u.abbr('Behavior', 'b')}}
+  <span class="equals">=</span>
+  {{ u.abbr('Motivation', 'm')}}
+  {{ u.abbr('Ability', 'a')}}
+  {{ u.abbr('Trigger', 't')}}
+{% endblock %}
+
+{% block slidebody -%}
+<ol class="btn-bread">
+  <li {% if active == 'icon' %}class="crumb-active"{% endif %}>Motivation</li>
+  <li {% if active == 'color' %}class="crumb-active"{% endif %}>Ability</li>
+  <li {% if active == 'size' %}class="crumb-active"{% endif %}>Trigger</li>
+</ol>
+{%- endblock %}

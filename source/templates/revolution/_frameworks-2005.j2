@@ -2,14 +2,25 @@
 
 {% import "utility.macros.j2" as utility %}
 
+{% block slide_classes %}grid grid-8{% endblock %}
+
+
 {% block slide %}
 
-  {{ utility.iconic_block('DTHMLX', '2005', 'pane') }}
+  {{ utility.iconic_block('DHTMLX', '2005', 'pane') }}
 
   {{ utility.iconic_block('Dojo', '2008', 'pane') }}
 
   {{ utility.iconic_block('MooTools', '2008', 'pane') }}
 
   {{ utility.iconic_block('Prototype', '2008', 'pane') }}
+
+  {{ utility.iconic_block('jQuery', '2006', 'pane') }}
+
+  {{ utility.iconic_block('Scriptaculous', '2008', 'pane') }}
+
+  {{ utility.iconic_block('ExtJS', '2008', 'pane') }}
+
+  {{ utility.iconic_block('YUI', '2008', 'pane') }}
 
 {% endblock %}

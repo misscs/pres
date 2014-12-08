@@ -2,6 +2,8 @@
 
 {% import "utility.macros.j2" as utility %}
 
+{% block slide_classes %}grid grid-8 vertical-center{% endblock %}
+
 {% block slide %}
 
   {{ utility.iconic_block('Sass', '2005', 'pane') }}
@@ -12,8 +14,12 @@
 
   {{ utility.iconic_block('Bower', '2008', 'pane') }}
 
-  {{ utility.iconic_block('Jekyll', '2008', 'pane') }}
+  {{ utility.iconic_block('Grunt', '2008', 'pane') }}
 
   {{ utility.iconic_block('NodeJS', '2008', 'pane') }}
+
+  {{ utility.iconic_block('CoffeeScript', '2008', 'pane') }}
+
+  {{ utility.iconic_block('Gulp', '2008', 'pane') }}
 
 {% endblock %}

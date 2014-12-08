@@ -1,8 +1,13 @@
-{% extends "slides/_blank.j2" %}
+{% extends "slides/_quote.j2" %}
 
-{% block slide %}
-“the response has been enormous and shows how badly JavaScript programmers
-want a better library for writing code with.”
-J.Resig's First Blog Post On JQuery.Com
-January 24, 2006
+{% block slide_classes %}quote vertical-center{% endblock %}
+
+{% block blockquote %}
+The response has been enormous and shows how badly JavaScript programmers
+want a better library for writing code with.
+{% endblock %}
+
+{% block author %}
+John Resig, first blog post jquery.com
+<time>January 24, 2006</time>
 {% endblock %}
