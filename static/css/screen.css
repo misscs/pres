@@ -56,7 +56,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 .alt-text,
-.is-hidden {
+.is-hidden, [data-toggle='make-shit-up'] .head, [data-toggle='colophon'] .head, .iconic-title span {
   position: absolute;
   height: 1px;
   width: 1px;
@@ -71,14 +71,50 @@ a:link, a:visited {
 }
 
 a:hover, a:focus, a:active {
-  color: #ff0080;
+  color: red;
 }
 
-.head {
+.slidewrap .slidebody h1, .head {
   font-size: 2.4375rem;
   line-height: 3.125rem;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.slidewrap .slidebody h2 {
+  font-size: 1.96875rem;
+  line-height: 2.5rem;
+}
+
+.slidewrap .slidebody h3 {
+  font-size: 1.5625rem;
+  line-height: 1.875rem;
+}
+
+.slidewrap .slidebody h4 {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+.slidewrap .slidebody p, .slidewrap .slidebody ol, .slidewrap .slidebody ul {
+  margin-bottom: 1.25rem;
+}
+.slidewrap .slidebody ol, .slidewrap .slidebody ul {
+  margin-left: 1.25rem;
+  text-align: left;
+}
+.slidewrap .slidebody ol {
+  counter-reset: ol;
+}
+.slidewrap .slidebody ol li {
+  counter-increment: ol;
+}
+.slidewrap .slidebody ol li:before {
+  content: counter(ol,decimal) ". ";
+  font-weight: bold;
+}
+.slidewrap .slidebody ul {
+  list-style: disc;
 }
 
 [data-icon] {
@@ -100,61 +136,61 @@ a:hover, a:focus, a:active {
 
 @font-face {
   font-family: "BebasNeue";
-  src: url('../fonts/bebas-neue/BebasNeue.woff?1417248660') format("woff"), url('../fonts/bebas-neue/BebasNeue.svg?1417248660') format("svg");
+  src: url('../fonts/bebas-neue/BebasNeue.woff?1417800740') format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "SourceCodePro";
-  src: url('../fonts/code/sourcecodepro-regular-webfont.woff?1416777669') format("woff"), url('../fonts/code/sourcecodepro-regular-webfont.svg') format("svg");
+  src: url('../fonts/code/sourcecodepro-regular-webfont.woff?1416777668') format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "SourceCodePro";
-  src: url('../fonts/code/sourcecodepro-bold-webfont.woff?1416777669') format("woff"), url('../fonts/code/sourcecodepro-bold-webfont.svg') format("svg");
+  src: url('../fonts/code/sourcecodepro-bold-webfont.woff?1416777668') format("woff");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Signika";
-  src: url('../fonts/signika/signika-regular.woff?1417249670') format("woff"), url('../fonts/signika/signika-regular.svg?1417249670') format("svg");
+  src: url('../fonts/signika/signika-regular.woff?1417800740') format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Signika";
-  src: url('../fonts/signika/signika-bold.woff?1417249670') format("woff"), url('../fonts/signika/signika-bold.svg?1417249670') format("svg");
+  src: url('../fonts/signika/signika-bold.woff?1417800740') format("woff");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Signika";
-  src: url('../fonts/signika/signika-500.woff?1417249670') format("woff"), url('../fonts/signika/signika-500.svg?1417249670') format("svg");
+  src: url('../fonts/signika/signika-500.woff?1417800740') format("woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "SignikaNegative";
-  src: url('../fonts/signika/signikanegative-regular.woff?1417249670') format("woff"), url('../fonts/signika/signikanegative-regular.svg?1417249670') format("svg");
+  src: url('../fonts/signika/signikanegative-regular.woff?1417800740') format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "SignikaNegative";
-  src: url('../fonts/signika/signikanegative-bold.woff?1417249670') format("woff"), url('../fonts/signika/signikanegative-bold.svg?1417249670') format("svg");
+  src: url('../fonts/signika/signikanegative-bold.woff?1417800740') format("woff");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "SignikaNegative";
-  src: url('../fonts/signika/signikanegative-semibold.woff?1417249670') format("woff"), url('../fonts/signika/signikanegative-semibold.svg?1417249670') format("svg");
+  src: url('../fonts/signika/signikanegative-semibold.woff?1417800740') format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "pres";
-  src: url('../fonts/icons/pres.woff?1416777669') format("woff"), url('../fonts/icons/pres.svg?1416777669') format("svg");
+  src: url('../fonts/icons/pres.woff?1416777668') format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -229,11 +265,12 @@ html {
 
 html, body {
   overflow-x: hidden;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 b {
-  color: #ff0080;
+  color: red;
 }
 
 .slide {
@@ -248,7 +285,6 @@ b {
   opacity: 0;
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: 1.25rem;
   position: relative;
   width: 100%;
   z-index: -1;
@@ -363,6 +399,610 @@ b {
 }
 .head b {
   display: inline-block;
+}
+
+.alt-text,
+.is-hidden, [data-toggle='make-shit-up'] .head, [data-toggle='colophon'] .head, .iconic-title span {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+a:link, a:visited {
+  color: #0099cc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover, a:focus, a:active {
+  color: red;
+}
+
+.slidewrap .slidebody h1, .head {
+  font-size: 2.4375rem;
+  line-height: 2.46094rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.slidewrap .slidebody h2 {
+  font-size: 1.96875rem;
+  line-height: 1.99219rem;
+}
+
+.slidewrap .slidebody h3 {
+  font-size: 1.5625rem;
+  line-height: 1.58203rem;
+}
+
+.slidewrap .slidebody h4 {
+  font-size: 1.25rem;
+  line-height: 1.26953rem;
+}
+
+.slidewrap .slidebody p, .slidewrap .slidebody ol, .slidewrap .slidebody ul {
+  margin-bottom: 1.25rem;
+}
+.slidewrap .slidebody ol, .slidewrap .slidebody ul {
+  margin-left: 1.25rem;
+  text-align: left;
+}
+.slidewrap .slidebody ol {
+  counter-reset: ol;
+}
+.slidewrap .slidebody ol li {
+  counter-increment: ol;
+}
+.slidewrap .slidebody ol li:before {
+  content: counter(ol,decimal) ". ";
+  font-weight: bold;
+}
+.slidewrap .slidebody ul {
+  list-style: disc;
+}
+
+[data-icon] {
+  font-family: "pres";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-icon]:before {
+  content: attr(data-icon);
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url('../fonts/bebas-neue/BebasNeue.woff?1417800740') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  src: url('../fonts/code/sourcecodepro-regular-webfont.woff?1416777668') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  src: url('../fonts/code/sourcecodepro-bold-webfont.woff?1416777668') format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Signika";
+  src: url('../fonts/signika/signika-regular.woff?1417800740') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Signika";
+  src: url('../fonts/signika/signika-bold.woff?1417800740') format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Signika";
+  src: url('../fonts/signika/signika-500.woff?1417800740') format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SignikaNegative";
+  src: url('../fonts/signika/signikanegative-regular.woff?1417800740') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SignikaNegative";
+  src: url('../fonts/signika/signikanegative-bold.woff?1417800740') format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SignikaNegative";
+  src: url('../fonts/signika/signikanegative-semibold.woff?1417800740') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pres";
+  src: url('../fonts/icons/pres.woff?1416777668') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-family: BebasNeue, "Helvetica Neue", Helvetica, Arial, sans-serif, sans-serif;
+}
+
+pre, code {
+  font-family: SourceCodePro, Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+}
+
+html {
+  font-size: 200%;
+  line-height: 1.25em;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[data-icon='compass']:before {
+  content: "";
+}
+
+[data-icon='susy']:before {
+  content: "";
+}
+
+[data-icon='oddbird']:before {
+  content: "";
+}
+
+[data-icon='warning']:before {
+  content: "";
+}
+
+[data-icon='cancel']:before {
+  content: "";
+}
+
+[data-icon='close']:before {
+  content: "";
+}
+
+[data-icon='checkmark']:before {
+  content: "";
+}
+
+[data-icon='minus']:before {
+  content: "";
+}
+
+[data-icon='plus']:before {
+  content: "";
+}
+
+[data-icon='twitter']:before {
+  content: "";
+}
+
+[data-icon='github']:before {
+  content: "";
+}
+
+.slidewrap {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  padding: 1.5rem;
+  height: 100%;
+}
+.slidewrap .slidebody {
+  text-align: center;
+}
+
+.stacked .list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.stacked .item {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 1 1;
+  flex: 1 1;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.grid {
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.grid-3 .pane, .grid-6 .pane {
+  -webkit-flex: 1 1 33%;
+  flex: 1 1 33%;
+}
+.grid-2 .pane, .grid-4 .pane {
+  -webkit-flex: 1 1 50%;
+  flex: 1 1 50%;
+}
+.grid-8 .pane {
+  -webkit-flex: 1 1 25%;
+  flex: 1 1 25%;
+}
+
+.bg--cover, [data-toggle='designed-for-resilience'], [data-toggle='sassy-capabilities'] .iconic--sache,
+.image--cover, .bg--contain, [data-toggle='bmat'] .slidewrap, [data-toggle='whats-the-point'], [data-toggle='colophon'], .iconic-title,
+.image--contain {
+  background-repeat: no-repeat;
+}
+
+.bg--cover, [data-toggle='designed-for-resilience'], [data-toggle='sassy-capabilities'] .iconic--sache,
+.image--cover {
+  background-size: cover;
+}
+
+.bg--contain, [data-toggle='bmat'] .slidewrap, [data-toggle='whats-the-point'], [data-toggle='colophon'], .iconic-title,
+.image--contain {
+  background-size: contain;
+}
+
+.vertical-center, pre, code {
+  align-items: center;
+  justify-content: center;
+}
+
+.quote blockquote {
+  font-size: 2.4375rem;
+  line-height: 2.46094rem;
+}
+.quote footer {
+  font-size: 1rem;
+  line-height: 1.03516rem;
+  font-style: italic;
+}
+
+pre, code {
+  text-align: center;
+}
+
+[data-toggle='capabilities-opportunities'] .pane {
+  -webkit-flex: 1 0 50%;
+  flex: 1 0 50%;
+  -webkit-align-self: stretch;
+  align-self: stretch;
+}
+
+.highlight {
+  font-size: 0.90625rem;
+  line-height: 0.9375rem;
+}
+.slidebody .highlight {
+  font-size: 0.625rem;
+  line-height: 0.9375rem;
+  border: 2px dashed #34132f;
+  border-width: 2px 0;
+  padding: 0.625rem;
+}
+
+.two-up {
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  display: -webkit-flex;
+  display: flex;
+  background: rgba(250, 250, 250, 0.75);
+  border: 2px dashed #34132f;
+  border-width: 2px 0;
+}
+.two-up .highlight {
+  -webkit-flex: 1;
+  flex: 1;
+  border: 0;
+  overflow: hidden;
+}
+.two-up .highlight + .highlight {
+  border-left: 1px dotted rgba(52, 19, 47, 0.25);
+}
+
+[data-toggle='revolutionary-defined'] .hook {
+  white-space: nowrap;
+  color: inherit;
+}
+
+[data-toggle='jquery-community-rising'] blockquote {
+  font-size: 2.4375rem;
+  line-height: 2.46094rem;
+}
+
+[data-toggle='quote-creativity'] blockquote {
+  font-size: 2.4375rem;
+  line-height: 2.46094rem;
+}
+
+[data-toggle='quote-npm-silvero'] blockquote {
+  font-size: 2.4375rem;
+  line-height: 2.46094rem;
+}
+
+[data-toggle='thanks-less'] blockquote {
+  font-size: 2.4375rem;
+  line-height: 2.46094rem;
+}
+
+[data-toggle='designed-for-resilience'] {
+  background-image: url("../images/smallworldnetwork.png");
+}
+
+[data-toggle='whats-behavior'] {
+  background-image: url("../images/whatifitoldyou.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+[data-toggle='whats-behavior'] .slidehead {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  color: white;
+  height: 100vh;
+}
+[data-toggle='whats-behavior'] .subhead {
+  margin-top: auto;
+}
+
+[data-toggle='bmat'] .slidewrap {
+  background-image: url("../images/bmat.png");
+}
+
+[data-toggle='mobile-power'] {
+  background: url("../images/first-iphone.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+[data-toggle='mobile-power'] .slidehead {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+[data-toggle='mobile-power'] .subhead {
+  margin-top: auto;
+}
+
+[data-toggle='sassy-capabilities'] .iconic--sache {
+  background-image: url("../images/sache.png");
+}
+
+[data-toggle='compass'] .slidebody {
+  font-size: 10rem;
+  margin-top: 5rem;
+  color: red;
+}
+
+[data-toggle='whats-the-point'] {
+  background-position: 50% 50%;
+  background-image: url("../images/redundant.png");
+}
+
+[data-toggle='make-shit-up'] {
+  background-image: url("../images/makeshitup.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+[data-toggle='colophon'] {
+  background-image: url("../images/fist.png");
+}
+[data-toggle='colophon'] .slidewrap {
+  width: 50%;
+  float: right;
+}
+
+@-moz-keyframes scroll-up {
+  0% {
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -moz-transform: translate3d(0, -24.375rem, 0);
+    transform: translate3d(0, -24.375rem, 0);
+  }
+}
+@-webkit-keyframes scroll-up {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -24.375rem, 0);
+    transform: translate3d(0, -24.375rem, 0);
+  }
+}
+@keyframes scroll-up {
+  0% {
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -moz-transform: translate3d(0, -24.375rem, 0);
+    -webkit-transform: translate3d(0, -24.375rem, 0);
+    transform: translate3d(0, -24.375rem, 0);
+  }
+}
+.iconic-title {
+  height: 210px;
+  background-position: 50% 50%;
+}
+
+.iconic--angular .iconic-title {
+  background-image: url("../images/logos/angular.png");
+}
+
+.iconic--bem .iconic-title {
+  background-image: url("../images/logos/bem.svg");
+}
+
+.iconic--bourbon .iconic-title {
+  background-image: url("../images/logos/bourbon.png");
+}
+
+.iconic--bower .iconic-title {
+  background-image: url("../images/logos/bower.png");
+}
+
+.iconic--breakpoint .iconic-title {
+  background-image: url("../images/logos/breakpoint.png");
+}
+
+.iconic--broccolijs .iconic-title {
+  background-image: url("../images/logos/broccolijs.png");
+}
+
+.iconic--coffeescript .iconic-title {
+  background-image: url("../images/logos/coffeescript.png");
+}
+
+.iconic--dhtmlx .iconic-title {
+  background-image: url("../images/logos/dhtmlx.jpeg");
+}
+
+.iconic--dojo .iconic-title {
+  background-image: url("../images/logos/dojo.svg");
+}
+
+.iconic--ember .iconic-title {
+  background-image: url("../images/logos/ember.png");
+}
+
+.iconic--extjs .iconic-title {
+  background-image: url("../images/logos/extjs.jpeg");
+}
+
+.iconic--git .iconic-title {
+  background-image: url("../images/logos/git.png");
+}
+
+.iconic--github .iconic-title {
+  background-image: url("../images/logos/github.png");
+}
+
+.iconic--gobblejs .iconic-title {
+  background-image: url("../images/logos/gobblejs.png");
+}
+
+.iconic--grunt .iconic-title {
+  background-image: url("../images/logos/grunt.png");
+}
+
+.iconic--gulp .iconic-title {
+  background-image: url("../images/logos/gulp.png");
+}
+
+.iconic--harpjs .iconic-title {
+  background-image: url("../images/logos/harpjs.svg");
+}
+
+.iconic--jekyll .iconic-title {
+  background-image: url("../images/logos/jekyll.png");
+}
+
+.iconic--jquery .iconic-title {
+  background-image: url("../images/logos/jquery-badge.png");
+}
+
+.iconic--less .iconic-title {
+  background-image: url("../images/logos/less.png");
+}
+
+.iconic--meteorjs .iconic-title {
+  background-image: url("../images/logos/meteorjs.png");
+}
+
+.iconic--mootools .iconic-title {
+  background-image: url("../images/logos/mootools.png");
+}
+
+.iconic--mythcss .iconic-title {
+  background-image: url("../images/logos/myth.jpg");
+}
+
+.iconic--nodejs .iconic-title {
+  background-image: url("../images/logos/nodejs.svg.png");
+}
+
+.iconic--octopress .iconic-title {
+  background-image: url("../images/logos/octopress.png");
+}
+
+.iconic--oocss .iconic-title {
+  background-image: url("../images/logos/oocss.jpg");
+}
+
+.iconic--prototype .iconic-title {
+  background-image: url("../images/logos/prototype.jpg");
+}
+
+.iconic--reworkcss .iconic-title {
+  background-image: url("../images/logos/rework.gif");
+}
+
+.iconic--rwd .iconic-title {
+  background-image: url("../images/logos/rwd.png");
+}
+
+.iconic--sass .iconic-title {
+  background-image: url("../images/logos/sass.png");
+}
+
+.iconic--smacss .iconic-title {
+  background-image: url("../images/logos/smacss.png");
+}
+
+.iconic--scriptaculous .iconic-title {
+  background-image: url("../images/logos/scriptaculous-light.png");
+}
+
+.iconic--susy .iconic-title {
+  background-image: url("../images/logos/susy.svg");
+}
+
+.iconic--stylus .iconic-title {
+  background-image: url("../images/logos/stylus.png");
+}
+
+.iconic--turbine .iconic-title {
+  background-image: url("../images/logos/turbine.png");
+}
+
+.iconic--yeoman .iconic-title {
+  background-image: url("../images/logos/yeoman.png");
+}
+
+.iconic--yui .iconic-title {
+  background-image: url("../images/logos/yuilib.jpg");
 }
 
 .c {
@@ -486,7 +1126,7 @@ b {
 }
 
 .s {
-  color: #ff0080;
+  color: red;
 }
 
 .n {
@@ -498,7 +1138,7 @@ b {
 }
 
 .nb {
-  color: #ff0080;
+  color: red;
 }
 
 .nc {
@@ -511,16 +1151,16 @@ b {
 }
 
 .ni {
-  color: #ff0080;
+  color: red;
 }
 
 .ne {
-  color: #ff0080;
+  color: red;
   font-weight: bold;
 }
 
 .nf {
-  color: #ff0080;
+  color: red;
   font-weight: bold;
 }
 
@@ -533,7 +1173,7 @@ b {
 }
 
 .nv {
-  color: #ff0080;
+  color: red;
 }
 
 .ow {
@@ -561,35 +1201,35 @@ b {
 }
 
 .sb {
-  color: #ff0080;
+  color: red;
 }
 
 .sc {
-  color: #ff0080;
+  color: red;
 }
 
 .sd {
-  color: #ff0080;
+  color: red;
 }
 
 .s2 {
-  color: #ff0080;
+  color: red;
 }
 
 .se {
-  color: #ff0080;
+  color: red;
 }
 
 .sh {
-  color: #ff0080;
+  color: red;
 }
 
 .si {
-  color: #ff0080;
+  color: red;
 }
 
 .sx {
-  color: #ff0080;
+  color: red;
 }
 
 .sr {
@@ -597,7 +1237,7 @@ b {
 }
 
 .s1 {
-  color: #ff0080;
+  color: red;
 }
 
 .ss {

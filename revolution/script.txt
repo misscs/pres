@@ -1,0 +1,336 @@
+[whats-revolutionary] - images of revolutions past and present 
+
+Something is revolutionary when it not only totally disrupts the established order but replaces it with a new order changing the dynamics of everything around it.
+
+For the last couple years there’s been a buzz in Front-End Development. Our field has undergone a huge shift, becoming one of the most in-demand specializations of web development. 
+
+[new-frameworks]
+
+With a litany of new frameworks, processing languages, tools, API, our new tools have not only changed our field but our lives as developers and designers. They’ve affected how do things on a day to day basis. 
+
+[capabilities-opportunities]
+giving us new capabilities (git 2005)
+that we can then transform into new opportunities (github 2008)
+
+Our tools are transforming our behavior in fundamental new ways. And it’s this behavioral change that’s revolutionary. To quote Clay Shirky, 
+
+“Revolutions don’t happen when we adopt new technologies, they happen when we adopt new behaviors”
+
+So what are these new behaviors have we acquired? 
+
+First, we need to agree on 
+
+[what’s-behavior]
+what we mean by behavior.  
+
+I’m using the Fogg Behavior Method create by Dr. BJ Fogg who heads the persuasive tech lab at Standard University. His behavioral model states that a behavior is a result of three components that must be present at the same moment for the behavior to occur. 
+
+[bmat]
+	b = mat which produces a graph
+
+Motivation, Ability, and Trigger…because these are multipliers we want to aim for the lowest degree in each…that will make a behavior easier to happen
+
+[bmat-graph]
+
+ Motivation is unreliable. It often takes a lot of work to sustain motivation and relying on motivation to create a habit doesn’t work. 
+Ability can also be thought of as time or simplicity.
+Trigger is the dominant factor. By focusing on simple triggers, we can develop habit. Habits are nothing more than automatic behaviors. 
+
+As you can see, you can be highly motivated and able but if there is no trigger, you won’t be able to perform the behavior
+
+Our tools are the triggers that allowed for our new behavior to flourish. And their design decisions were successful at persuading us to adopt new ways of working.
+
+[back-to-2005]
+
+To understand how this happened we have to back to the mid aughts - 2004-2005.
+
+[movers-and-shakers]
+	Ruby on Rails was released in 2004, 
+	Django	
+	@TODO what was iconic in 2005!!!!
+	CREATIVE COMMONS?
+
+ and there were lots of rumblings in web development New developments in back-end, Frameworks were spearheading the rise of SaSS
+In our field of front-end development, both JavaScript and CSS we poised for eruption as we were growing frustrated with browser inconsistencies. 
+
+[frameworks-2005] 
+
+New JS frameworks started popping up. 
+
+Aimed at addressing the API inconsistencies across browsers to provide a better authoring experience for developers. 
+In 2006, John Resig released jQuery. 
+
+[quote-jquery-release]
+(Slide Resig’s first blog post). 
+
+Interestingly, JQuery was not the first JavaScript framework, but it did three things that no other framework addressed: 
+
+[design-trifecta-01] 1. a simple approach/solution to DOM manipulation 
+[design-trifecta-02] good documentation (quote)
+[design-trifecta-03] an invitation to participate, opening up the possibility for anyone to con Prior to jQuery it was very difficult to contribute back to JS. In fact, its JavaScripts tumultuous, political history that caused all the browser inconsistencies and frustrations for its users. illustrate this! 
+
+By its second day, it already had its first contribution.
+
+[jquery-community-rising] photos
+
+jQuery created an environment where people could get things done without barriers and it made it incredibly simple to get started and allowed anyone with sufficient motivation to contribute. It was the trigger…
+
+[bmat graph?]
+
+And it has been a success 
+
+[jquery-success]
+
+Unequivocally the most import source project of the last decade. jQuery is the most popular JS framework. 
+But beyond fame, its design decisions set a precent for all successful frameworks and languages after.
+
+[design-trifecta]
+
+ Ultimately paving the way for other projects like NodeJS, Angular, Grunt. (If we look at the 
+
+[js-trends]
+
+we can see that at the point where jQuery’s growth was starting to plateau, Node, Grunt and new projects were starting to take off at rapid pace). 
+
+The value of collaboration cannot be underestimated
+
+[quote-npm-silvero]
+
+It means the prospect for more new ideas that can make our tools better but provide new insights for the future. Because we’re so steeped in it and especially since contributing back has always been part of back-end, but its foray into front-end is a relative recent development of the last decade. 
+
+[sup-css]
+
+For CSS this ability to contribute is a much more recent development.
+
+What did 2005 in CSS look like: well,  
+
+[css-2005] if time breakout each to their own slide
+
+960px was the way to design, 
+
+IE6, 7, 8, and 9 were alive and kicking, 
+
+CSS3 ( (EST ?), 
+
+had just come out and while we were thrilled by all the prospects 
+
+a slide that cross out the old ways and shows the new ways of doing things like 
+	-no more rounded corner hacks: Border radius
+	- gradients
+
+it introduced a ton of complexity. 
+
+[css-complexities]
+
+Features were inconstantly implemented in turn making forcing us to write a ton of browser prefixes
+
+and little did we know that this thing 
+
+[mobile-power]
+
+was about to come wallop our notions of our best practices and web development
+
+[#fuckstandards]
+	RWD!!! 
+	BEM!!!
+	OOCSS!!!
+
+We needed a way to survive this maze of complexity and we we were desperate for a solution (high motivation) and had wonderful precedents before (early example of abstract language haml?)
+
+[css-preprocessors]
+
+The rise of the CSS preprocessor was inevitable, we were ready for it. Our jobs depended on it. (http://www.catswhocode.com/blog/8-css-preprocessors-to-speed-up-development-time). 
+Much like jQuery, Sass was but one of many tools promising a solution for our stylesheet woes. So how did it emerge the victor especially when despite being recognized as the most powerful it was also extremely difficult to install and use (SASS syntax)
+
+slides of articles with quotes
+
+analyze this on the map….so if we are to plot sass on the map, it mean you had to be highly motivated. or have a trigger, like I’m working on Rails project. 
+
+For a long time Less remained a powerful contender because it was so simple and easy to use; its adoption in Twitter Bootstrap didn’t help, but I suspect we’ll see a decline in popularity of that version
+
+[thanks-less]
+
+In fact, I want to take the time to thank LESS for one thing: if it weren’t for less we wouldn’t have the curly brackets. I argue that was major turning point for Sass, making it easier for people to jump into it.  
+
+(bring up the behavior diagram….)
+
+So, how and why did Sass emerge as the victor? 
+
+[compass-gave-direction] 
+
+While Sass was pluggable by design, it wasn’t until Compass come out and provided us with examples of what to do and a way to contribute. Suddenly, we could start sharing. Compass was to Sass what jQuery was to JS and it followed the same design principles.
+
+if time slides showing how compass conformed to design principles
+
+Compass opened up a new way to contribute. And we ran with this new capability…creating new opportunities for front-end:  
+
+	[sassy-capabilities] slides of logos of sass extensions
+
+Our new front-end tools have lowered the threshold for finding good ideas. 
+
+[influencers]
+
+As a result, these good ideas can in turn be integrated back into the parent language—and we are seeing a big rise of new language features influenced by our experiments! 
+
+[sloth-institutions] (congress) 
+We are now empowered to get out there ourselves without having to depend on large institutions…because we all know how well that goes.
+
+[quote-innovation]
+Ours tools have triggered a participatory culture revolution by changing how we are able to work together and work around the naysayers.
+
+This is a fundamental new way of thinking about innovation…it’s
+bottom up, participatory, democratic, chaotic (read from slide 
+
+@TODO Think about how to break this out!!!! probably best to have one for each
+
+[new-behaviors]
+
+We’ve enabled groups and individuals to try radical things! by removing any barriers to collaboration
+	the act of working together, physically and intellectually, meshing ideas and configuring our ideas to incorporate the ideas of others
+- We’re creating an environment in which people who want to get something done can in a timely fashion
+- We’re creating encouraging and supportive environments that nurture creativity and individuality
+
+Both the ability for collective participation and action are extremely necessary ingredients for change. 
+
+[potential-for-impossible]
+
+Our ability to learn and work together is growing stronger which is leading to more ideas and more change and more potential. In a relatively short span of time, we’ve completly changed how we do things. We wouldn’t dream of starting a new project with one of our new tools much in the same way we wouldn’t dream of running a conference with a code-of-conduct and a charge for diversity.
+ 
+[revolution quote in the background
+
+III. Why is this behavior shift important? 
+
+We may begin to feel like what is the point of all of this? 
+
+[whats-the-point]
+
+Do we really need another static site generator or build tool or grid extension?  
+
+[yet-another]
+
+it may start to seem really redundant. but it is isn’t 
+
+[quote-creativity] 
+
+especially at our age. I mean, we, front-end development, are only 10 years into our participatory culture shift. 
+
+[BC-AC]
+
+I know css and js are more like 20 some years old, but that was BCollaboration we are AC 10 . 
+
+what grade were most of you in when you were 10? I was in the 5th grade. 
+	
+	images of me in 5th grade
+
+in 5th grade we are coming into ourselves, we’ve still got a tremendous amount of maturing ahead. Having once been teenagers ourselves  Our following years are going to be hard—we shouldn’t underestimate its difficulty. We should know by now, but we don’t….show announcements of harassment in tech.
+
+freaks and geeks? best example of getting picked on in HS
+
+[its-about-humanity]
+
+I predict that we are going to see shift from technical problems and more interpersonal; about the people to people, the human connection. 
+
+[no-cliques] Let’s be careful not to form cliques. 
+
+	We need to take care to be helpful, welcoming, communities that celebrate diversity and difference. Remember to be kind—we all make mistakes. 	To quote a man who cares effortless about community, Chris Eppstein: 
+
+	Let’s continue to ensure that we are open and include everyone no matter their race, beliefs,  or discipline, skill level or skill set. There are other areas of front-end development that are still in need of a trigger. 
+
+	[foss-design] @chris’s tweet about design 
+
+Designers working on back-end open source projects are incredibly rare and necessary. 	
+	[dribbble-scores] Dribbble is starting to provide remix culture to design, but there’s still a lot of work for design in free and open source culture. 
+	What if, instead of pouring design hours to recreating existing software, we donated our time to open source projects to small non-profits.
+
+	What needs to happen for this to take off? What can we d
+	
+	[unas-ideas]
+	USE YOUNAS ARTICLE as a segway into behaviors to try to show how we can create little triggers: 
+
+	[yes]
+
+	What’s wonderful and encouraging is that we are already working on it and there are many great examples of success within our close groups.
+
+	[images of diversity in our tech communities or photos from sass conf]
+	[quote from fox!]
+
+Let’s make sure that we share our best organizing practices as much as our code. Remix or conferences 
+
+	(converge borrowing from grok)
+
+
+IV. Where do we go from here?
+
+[designed-for-resilience]
+
+What’s incredible and perhaps gotten unnoticed is that not only have we radically changed our behaviors but in the process we’ve designed our front-end communities for resilience.
+
+[graph-power-log]
+
+Many of the trends we’ve looked at this morning have exhibited this type of growth, including Fogg’s Behavior Model. We commonly know this graph as the power-log graph but in network science this graph represents a small world network. 
+
+[Small world networks]
+		
+	Small network theory was first proposed in 2004. Small world networks are characterized by being made up of small tightly connected groups that connect to larger nodes. 
+
+	Of interest to us there are two evolutionary advantages of small world networks:
+	* [Resistant to to damage]
+* [dissemination] effective disseminators of information; acts as both amplifiers (getting information across all groups) and filters (weeding out the cruft)
+
+	@TODO	FINISH READING ESSAYS TOMORROW
+
+	Given that we are so skilled at creating such a resilient network based on valuing contributions and uniqueness of each community member in such a short amount of time, I believe that we have a lot to contribute back to society beyond beautiful websites. 
+
+	[civic-contributions]
+	[web project that started in ferguson]
+
+	Citizens the world over are calling for change. 
+
+	[calling-for-change]
+
+I believe, along with many others, that the change will only come through a participatory culture/revolution..
+
+[quote-mio-rio]
+
+Where the same design decisions that made our tools so great are applied to urban planning to make our cities better by including citizens voices beyond the ballot box. 
+
+We can bring perspective for our rhizomatic structure lies in deep in the soil of human cooperation and collaboration.
+
+[rhizomes-in-collaboration] - DELEUZE
+
+We are successful, practicing models of communities of participatory culture.  We are more than just UI developers, we are the leaders of one of the largest movements in the world. 
+
+	[participatory-culture]
+	images of events, bar camps, un-conferences, etc find images and things that convey participatory culture
+
+
+We have an immensely valuable perspective to share beyond our tech communities. Let’s start to apply what we’ve learned at the civic level and 
+
+Being a front-end developer is to hold immense power in your hands. As the gateway into programming we must keep this in mind as new people learning to code. Code literacy is more than just a job or a career change. It means the ability to contribute to the largest human network in history. 
+
+[our-power]
+	- code for america
+	- mapbox
+	- ushahidi
+	- coder dojo
+	- black girls code
+	- Girl Develop IT
+
+It is up to us to decide what we what to do with our new capabilities. What opportunities do we want to create? do we create opportunities where they are needed most? 
+
+[create-opportunities]
+
+I urge you to think about opportunities you want to create be it here in our front-end community or your neighborhood. 
+
+	[We’re doing something right, let’s keep rewarding our imaginations]
+
+if you don’t have one, start mentoring,  release a plugin—can be as simple a collection of mixins you like—fix a bug, share your thoughts and ideas in a blog post or another creative way; organize a regional camp, conference, festival—just like this one. 
+
+	[make-shit-up]
+
+As you create, and experiment,  remember to encourage and reward participation at every step along the way. If we do this, we will continue to innovate and given what we’ve just observed, 
+
+	[revolutionary-innovations]
+	our innovations will most certainly continue to have high potential to be revolutionary. 
+
+Thank you. 

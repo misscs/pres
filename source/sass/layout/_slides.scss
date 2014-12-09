@@ -1,164 +1,140 @@
-// Map Magic Slides
-// ================
+// The Front-End Revolution Slides
+// ===============================
 
 @import "base/base";
+@import "slide.config";
 
-%vertical-center {
-  @include display-flex;
-  @include align-items(center);
-  .slidewrap { width: 100%; }
+.is-hidden {
+  @extend %is-hidden;
 }
 
-%default {
-  @extend %vertical-center;
+// defaults
+.slidewrap {
+  @include display-flex;
+  @include flex-direction(column);
+  padding: 1.5rem;
+  height: 100%;
+
+  .slidebody {
+    @extend %type;
+    text-align: center;
+  }
+
+}
+
+// Classes for building slides
+// all classes build on .slidewrap
+
+// Stacked, evenly spaced rows
+.stacked {
+  .list {
+    @include display-flex;
+    @include flex-direction(column);
+  }
+
+  .item {
+    @include display-flex;
+    @include flex(1 1);
+    align-items: center;
+    padding-left: 2rem;
+  }
+}
+
+// Grided layouts
+.grid {
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  text-align: center;
+
+  &-3 .pane,
+  &-6 .pane {
+    @include flex(1 1 33%);
+  }
+
+  &-2 .pane,
+  &-4 .pane {
+    @include flex(1 1 50%);
+  }
+
+  &-8 .pane {
+    @include flex(1 1 25%);
+  }
+}
+
+// Slides with images
+
+%image-slide {
+  background-repeat: no-repeat;
+}
+
+.bg--cover,
+.image--cover {
+  @extend %image-slide;
+  background-size: cover;
+}
+
+.bg--contain,
+.image--contain {
+  @extend %image-slide;
+  background-size: contain;
+}
+
+.vertical-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.quote {
+  blockquote {
+    @include font-size(xlarge);
+  }
+  footer {
+    @include font-size(normal);
+    font-style: italic;
+  }
 }
 
 %code {
-  @extend %vertical-center;
+  @extend .vertical-center;
   text-align: center;
 }
 
-%btn-bread {
-  @extend %type;
-  @extend %default;
-  @include font-size(h3);
-  color: color(base (rgba: .5));
-
+%diptych {
   .slidewrap {
-    @include display-flex;
-    @include justify-content(center);
+
   }
 
-  .crumb-active {
-    color: color(accent);
-    font-weight: bold;
+  .pane {
+    @include flex(1 0 50%);
+    @include align-self(stretch);
   }
 }
 
-@mixin slide(
-  $name,
-  $extends: false
-) {
-  [data-toggle='#{$name}'] {
-    @if $extends {
-      @each $class in $extends {
-        @extend %#{$class};
-      }
-    }
-    @content;
-  }
-}
+// %btn-bread {
+//   @extend %type;
+//   @extend %default;
+//   @include font-size(h3);
+//   color: color(base (rgba: .5));
 
-@mixin is-active($name) {
-  [id="toggle-slide-#{$name}"]:checked + & {
-    @content;
-  }
-}
+//   .slidewrap {
+//     @include display-flex;
+//     @include justify-content(center);
+//   }
+
+//   .crumb-active {
+//     color: color(accent);
+//     font-weight: bold;
+//   }
+// }
 
 
 // Common
 // ------
 
-$default:
-  'title',
-  'sourcemaps',
-  'intro-map',
-  'no-magic',
-  'intro-css',
-  'intro-mapcss',
-  'intro-mundane',
-  'intro-mundane-maps',
-  'intro-insane',
-  'intro-sane',
-  'buttons-title',
-  'queer',
-  'btn-preview',
-  'btn-preview-options',
-  'basics-title',
-  'maps-empty',
-  'maps-longhand',
-  'maps-merge',
-  'maps-merge-result',
-  'maps-edit',
-  'maps-set',
-  'maps-remove',
-  'maps-get',
-  'maps-more',
-  'maps-loop',
-  'maps-args',
-  'maps-vargs',
-  'simple-keys',
-  'buttons-please',
-  'buttons-please2',
-  'btn-modules',
-  'icons-basic',
-  'icons-placeholder',
-  'icons-long',
-  'icons-map',
-  'icons-loop',
-  'icons-function',
-  'icons-mixin',
-  'icons-data-demo',
-  'icons-mixin-demo',
-  'icons-map-recursive',
-  'icons-function-recursive',
-  'icons-recursive-demo',
-  'icons-content',
-  'colors-variable',
-  'colors-map',
-  'colors-recursive',
-  'colors-error',
-  'colors-adjust',
-  'colors-function',
-  'size-variables',
-  'size-map',
-  'size-ratios',
-  'size-combo',
-  'size-get',
-  'size-function',
-  'display',
-  'display-shorthand',
-  'display-map',
-  'display-parse-goal',
-  'display-parse',
-  'display-btn-mixin',
-  'shapes',
-  'shapes-option',
-  'shapes-function',
-  'combo',
-  'styles',
-  'styles-option',
-  'styles-functions',
-  'styles-custom',
-  'styles-render',
-  'styles-render-demo',
-  'combo-icons',
-  'combo-render',
-  'combo-mixin',
-  'combo-demo',
-  'defaults',
-  'defaults-user',
-  'defaults-function',
-  'presets-intro',
-  'presets',
-  'presets-parse',
-  'omg',
-  'social',
-  'social-demo',
-;
+$default: ();
 
 $code: ();
-
-$btn-bread:
-  'btn-bread-icon',
-  'btn-bread-color',
-  'btn-bread-size',
-  'btn-bread-icons',
-  'btn-bread-display',
-  'btn-bread-shapes',
-  'btn-bread-styles',
-  'btn-bread-preset',
-;
 
 
 // Slide Details
@@ -194,71 +170,131 @@ $btn-bread:
   }
 }
 
-@each $slide in $default {
-  @include slide($slide, 'default');
-}
 
-@each $slide in $code {
-  @include slide($slide, 'code');
-}
-
-@each $slide in $btn-bread {
-  @include slide($slide, 'btn-bread');
-}
-
-
-@include slide(title) {
-  .slidewrap {
-    @include display-flex;
-    @include flex-direction(column);
-    @include justify-content(space-around);
-    height: 100%;
+@include slide('revolutionary-defined') {
+  .hook {
+    white-space: nowrap;
+    color: inherit;
   }
+}
+
+@include slide('jquery-community-rising') {
+  blockquote {
+    @include font-size(h1);
+  }
+}
+
+@include slide('quote-creativity') {
+  blockquote {
+    @include font-size(h1);
+  }
+}
+
+@include slide('quote-npm-silvero') {
+  blockquote {
+    @include font-size(h1);
+  }
+}
+
+@include slide('thanks-less') {
+  blockquote {
+    @include font-size(h1);
+  }
+}
+
+
+@include slide('designed-for-resilience') {
+  @extend .bg--cover;
+  background-image: url('../images/smallworldnetwork.png');
+}
+
+@include slide('capabilities-opportunities', 'diptych');
+
+@include slide('whats-behavior') {
+  background-image: url('../images/whatifitoldyou.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .slidehead {
-    margin: size(gutter) 0;
-  }
-
-  .slidebody {
-    @include align-items(center);
     @include display-flex;
+    @include flex-direction(column);
+    color: white;
+    height: 100vh;
   }
 
-  .logos {
-    @include flex(1 50%);
-    text-align: right;
-    white-space: nowrap;
-
-    [data-icon] {
-      vertical-align: middle;
-    }
+  .subhead {
+    margin-top: auto;
   }
 
-  .logo {
-    #{$link} {
-      @include font-size(h1);
-      color: color('gray');
-      display: inline-block;
-      margin-right: size(shim);
-    }
+}
 
-    #{$focus} {
-      color: color(focus);
-    }
+@include slide('bmat') {
+
+  .slidewrap {
+    @extend .bg--contain;
+    background-image: url('../images/bmat.png');
+  }
+}
+
+@include slide('mobile-power') {
+  background: url('../images/first-iphone.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  .slidehead {
+    @include display-flex;
+    @include flex-direction(column);
   }
 
-  .info {
-    @include flex(1 50%);
-    @include font-size(smaller, .75);
-    border-left: 2px dashed color(border);
-    padding: size(shim);
+  .subhead {
+    margin-top: auto;
+  }
+}
+
+@include slide('sassy-capabilities') {
+  .iconic--sache {
+    @extend .bg--cover;
+    background-image: url('../images/sache.png');
+  }
+}
+
+
+@include slide('compass') {
+  .slidebody {
+    font-size: 10rem;
+    margin-top: 5rem;
+    color: hsl(0,100%,50%);
+  }
+}
+
+@include slide('whats-the-point') {
+  @extend .bg--contain;
+  background-position: 50% 50%;
+  background-image: url('../images/redundant.png');
+}
+
+@include slide('make-shit-up') {
+  .head {
+    @extend %is-hidden;
   }
 
-  .license {
-    color: color('gray');
+  background-image: url('../images/makeshitup.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-    strong { font-weight: bold; }
-    a { font-style: italic; }
+@include slide('colophon') {
+  @extend .bg--contain;
+  background-image: url('../images/fist.png');
+
+  .slidewrap {
+    width: 50%;
+    float: right;
+  }
+
+  .head {
+    @extend %is-hidden;
   }
 }
 
@@ -267,23 +303,68 @@ $btn-bread:
   100% { @include translate3d(0, - size(gutter) * 19.5, 0); }
 }
 
-@include slide('no-magic') {
-  .samples {
-    border: 2px dashed color(border);
-    border-width: 2px 0;
-    max-height: size(gutter) * 8;
-    overflow: hidden;
+// @each $slide in $default {
+//   @include slide($slide, 'default');
+// }
+
+
+.iconic-title {
+  @extend .bg--contain;
+  height: 210px;
+  background-position: 50% 50%;
+
+  span {
+    @extend %is-hidden;
   }
 
-  .s-wrap {
-    position: relative;
+}
 
-    @include is-active('no-magic') {
-      @include animation(scroll-up 5s 600ms ease-in-out both);
+$iconic: (
+  'angular': 'angular.png',
+  'bem': 'bem.svg',
+  'bourbon': 'bourbon.png',
+  'bower': 'bower.png',
+  'breakpoint': 'breakpoint.png',
+  'broccolijs': 'broccolijs.png',
+  'coffeescript': 'coffeescript.png',
+  'dhtmlx': 'dhtmlx.jpeg',
+  'dojo': 'dojo.svg',
+  'ember': 'ember.png',
+  'extjs': 'extjs.jpeg',
+  'git': 'git.png',
+  'github': 'github.png',
+  'gobblejs': 'gobblejs.png',
+  'grunt': 'grunt.png',
+  'gulp': 'gulp.png',
+  'harpjs': 'harpjs.svg',
+  'jekyll': 'jekyll.png',
+  'jquery': 'jquery-badge.png',
+  'less': 'less.png',
+  'meteorjs': 'meteorjs.png',
+  'mootools': 'mootools.png',
+  'mythcss': 'myth.jpg',
+  'nodejs': 'nodejs.svg.png',
+  'octopress': 'octopress.png',
+  'oocss': 'oocss.jpg',
+  'prototype': 'prototype.jpg',
+  'reworkcss': 'rework.gif',
+  'rwd': 'rwd.png',
+  'sass': 'sass.png',
+  'smacss': 'smacss.png',
+  'scriptaculous': 'scriptaculous-light.png',
+  'susy': 'susy.svg',
+  'stylus': 'stylus.png',
+  'turbine': 'turbine.png',
+  'yeoman': 'yeoman.png',
+  'yui': 'yuilib.jpg'
+
+);
+
+
+@each $tool, $logo in $iconic {
+  .iconic--#{$tool} {
+    .iconic-title {
+      background-image: url('../images/logos/#{$logo}');
     }
-  }
-
-  .highlight {
-    border: 0;
   }
 }

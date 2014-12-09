@@ -1,3 +1,33 @@
+{# Render attr=value if value, otherwise nothing. #}
+{% macro attr_if(value, attr) %}
+  {%- if value -%}
+    {{ attr }}="{{ value }}"
+  {%- endif -%}
+{% endmacro %}
+
 {% macro icon(icon) %}
   <span data-icon="{{ icon }}"></span>
+{% endmacro %}
+
+{% macro iconic_block(title, year, classes=none)%}
+<div class="iconic iconic--{{ title|lower }} {{ classes }}">
+  <h2 class="iconic-title"><span class="is-hidden">{{ title }}</span></h2>
+  {# <p class="iconic-byline">{{ established(year) }}</p> #}
+</div>
+{% endmacro %}
+
+{% macro established(year) %}
+  <abbr title="Established">Est</abbr> {{ year }}
+{% endmacro %}
+
+{% macro accent(content) %}
+  <b>{{ content }}</b>
+{% endmacro %}
+
+{% macro abbr(title, content) %}
+  <abbr title={{ title }}>{{ content }}</abbr>
+{% endmacro %}
+
+{% macro image(src, alt) %}
+  <img src="../static/images/{{ src }}" title="{{ alt }}">
 {% endmacro %}

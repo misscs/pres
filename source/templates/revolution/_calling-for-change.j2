@@ -2,14 +2,21 @@
 
 {% import "utility.macros.j2" as u %}
 
+{% block slide_classes %}vertical-center{% endblock %}
 
 {% block h1 %}
-  Cizitiens calling for change
+  Citizens {{ u.accent('calling for change') }}
 {% endblock %}
 
 
 {% block slidebody -%}
- Images of ferguson, earl garner, or lights of protests!
+ <ul>
+  <li><a href="https://twitter.com/hashtag/YaMeCanse">#YaMeCansé</a></li>
+  <li><a href="https://twitter.com/hashtag/blacklivesmatter">#BlackLivesMatter</a></li>
+  <li><a href="">#NoJusticeNoPeace</a></li>
+  <li><a href="">#ThisStopsToday</a></li>
+  <li><a href="">#EnoughIsEnough</a></li>
+</ul>
 {%- endblock %}
 
 

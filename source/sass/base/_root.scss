@@ -10,18 +10,13 @@ html {
 
 html, body {
   overflow-x: hidden;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 
 // Type
 // ----
-
-.amp {
-  @extend %amp;
-  font-weight: normal;
-  font-style: normal;
-}
 
 pre, code { @extend %code; }
 b { color: color(accent); }

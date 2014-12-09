@@ -1,17 +1,14 @@
 // Fonts
 // =====
 
+$font-formats: woff;
+
 $fonts: (
   sans: (
-    name: SourceSansPro,
+    name: BebasNeue,
     type: sans-serif,
-    files: (
-      regular: 'sans/sourcesanspro-light-webfont',
-      italic: 'sans/sourcesanspro-lightitalic-webfont',
-      bold: 'sans/sourcesanspro-bold-webfont',
-      bold italic: 'sans/sourcesanspro-bolditalic-webfont',
-    ),
-    stack: ('Helvetica Neue', Helvetica, Arial, sans-serif),
+    files: (normal: 'bebas-neue/BebasNeue'),
+    stack: ('Helvetica Neue', Helvetica, Arial, sans-serif)
   ),
 
   code: (
@@ -22,9 +19,21 @@ $fonts: (
     stack: (Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New'),
   ),
 
-  amp: (
-    name: BaskervilleAmp,
-    files: (normal: 'amp/Baskerville-amp-webfont'),
+  signika: (
+    name: Signika,
+    path: 'signika/signika-%s%s',
+    styles: (regular, bold, 500),
+    stack: (Tahoma, Helvetica, Arial, sans-serif)
+  ),
+
+  negative: (
+    name: SignikaNegative,
+    files: (
+      regular: 'signika/signikanegative-regular',
+      bold: 'signika/signikanegative-bold',
+      semibold: 'signika/signikanegative-semibold'
+      ),
+    stack: (Tahoma, Helvetica, Arial, sans-serif)
   ),
 
   pres: (

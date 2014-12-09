@@ -59,6 +59,7 @@ $focus: '&:hover, &:focus, &:active';
 
   ol, ul {
     margin-left: size(gutter);
+    text-align: left;
   }
 
   ol {
