@@ -1,0 +1,66 @@
+{% extends "pres.j2" %}
+{% import "slides/macros.j2" as pres %}
+
+{% block data_talk %}revolution{% endblock %}
+
+{% block pres %}
+
+  {{ pres.loop(
+     talk='revolution',
+     slides = [
+      'whats-revolutionary',
+      'revolutionary-defined',
+      'new-frameworks',
+      'capabilities-opportunities',
+      'quote_revolutions',
+      'whats-behavior',
+      'bmat',
+      'back-to-2005',
+      'frameworks-2005',
+      'quote_jquery_release',
+      'design-trifecta-01',
+      'design-trifecta-02',
+      'design-trifecta-03',
+      'jquery-community-rising',
+      'jquery-success',
+      'quote-npm-silvero',
+      'sup-css',
+      'css-2005',
+      'mobile-power',
+      'fuckstandards',
+      'css-preprocessors',
+      'thanks-less',
+      'game-changer',
+      'compass',
+      'sassy-capabilities',
+      'influencers',
+      'sloth-institutions',
+      'quote-innovation',
+      'new-behaviors',
+      'ingredients-for-change',
+      'potential-for-impossible',
+      'whats-the-point',
+      'yet-another',
+      'quote-creativity',
+      'its-about-humanity',
+      'no-cliques',
+      'yes',
+      'designed-for-resilience',
+      'small-world-networks',
+      'civic-contributions',
+      'calling-for-change',
+      'quote-alexs',
+      'our-power',
+      'create-opportunities',
+      'imagine-reward',
+      'make-shit-up',
+      'colophon'
+    ],
+     dev=False
+  )}}
+
+{% endblock %}
+
+{% block js %}
+  {{ static.js() }}
+{% endblock %}

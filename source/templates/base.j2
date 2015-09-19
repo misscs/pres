@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 
-  {% import '_static.j2' as static %}
+  {% import 'static.html' as static %}
 
   <!-- Page Info -->
   <title>{% block title %}The Front-End Revolution{% endblock %}</title>
@@ -22,17 +22,17 @@
   <!-- Styles -->
   {% block styles %}
   {{ static.css() }}
-  {% endblock styles %}
+  {% endblock %}
 </head>
 
 <body class="{% block bodyclasses %}{% endblock %}" {% block pres_data %}{% endblock %}>
 
-{% block template %}{% endblock template %}
+{% block template %}{% endblock %}
 
 <!-- JavaScript -->
 {% block js %}
 {{ static.js() }}
-{% endblock js %}
+{% endblock %}
 
 </body>
 </html>

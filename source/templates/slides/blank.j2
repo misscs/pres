@@ -1,0 +1,11 @@
+{% import 'slides/macros.j2' as slide %}
+
+
+  <section class="slide" data-toggle="{{ name }}">
+
+    <div class="slidewrap {% block slide_classes %}{% endblock %}">
+      {% block slide %}
+      {% endblock %}
+    </div>
+
+  </section>

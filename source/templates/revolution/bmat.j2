@@ -1,0 +1,20 @@
+{% extends "slides/default.j2" %}
+
+{% import "utility.macros.j2" as u %}
+
+{% block h2 %}Motivation Ability Trigger</a>{% endblock %}
+{% block h1 %}
+<b>
+  {{ u.abbr('Behavior', 'b')}}
+  <span class="equals">=</span>
+  {{ u.abbr('Motivation', 'm')}}
+  {{ u.abbr('Ability', 'a')}}
+  {{ u.abbr('Trigger', 't')}}
+</b>
+{% endblock %}
+
+{% block slidebody -%}
+
+
+<a href="http://www.behaviormodel.org/">Fogg Behavior Model</a>
+{%- endblock %}

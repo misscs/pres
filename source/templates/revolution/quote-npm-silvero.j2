@@ -1,0 +1,17 @@
+{% extends "slides/quote.j2" %}
+
+{% import "utility.macros.j2" as u %}
+
+{% block quote %}
+<b>npm is the heart of node.js. It’s the secret to node’s success</b>:
+a package manager that <b>learned from its predecessors</b> and got an enormous number
+of things right...You’re cooking with jet fuel, jet fuel provided in little
+modular canisters by hundreds of strangers who like to share their
+codefuel with everybody else...{{ u.accent('NPM lets me give back') }}...[it's]
+{{ u.accent(' the secret advantage of node') }}
+{% endblock %}
+
+{% block author %}
+  <em><a href="http://blog.npmjs.org/post/74778135095/cj-silverio">CJ Silverio</a></em>
+  (<a href="https://twitter.com/ceejbot">@ceebot</a>), second hire at NPM Inc
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "slides/quote.j2" %}
+
+{% import "utility.macros.j2" as u %}
+
+{% block slide_classes %}quote vertical-center{% endblock %}
+
+{% block quote %}
+<p>{{ u.accent('Revolutions') }} don't happen when society adopts new technologies,
+  they {{ u.accent('happen when society adopts new behaviors') }}.
+</p>
+{% endblock %}
+
+{% block author %}
+  <em>Clay Shirky</em>, Here Comes Everybody
+{% endblock %}

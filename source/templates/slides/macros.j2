@@ -1,0 +1,52 @@
+{% macro pre(name, focus, slide_classes=none) -%}
+  <input type="radio" id="toggle-slide-{{ name }}" name="slide-toggles" {% if focus %}checked autofocus{% endif %} />
+  <section class="slide" data-toggle="{{ name }}">
+{%- endmacro %}
+
+{% macro post(name, prev=False, next=False) -%}
+<nav class="slidenav">
+  {% if prev %}
+  <label class="prev" for="toggle-slide-{{ prev }}">
+    <span class="alt-text">previous</span>
+  </label>
+  {% endif %}
+  {% if name %}
+  <label class="this" for="toggle-slide-{{ name }}">
+    <span class="alt-text">this</span>
+  </label>
+  {% endif %}
+  {% if next %}
+  <label class="next" for="toggle-slide-{{ next }}">
+    <span class="alt-text">next</span>
+  </label>
+  {% endif %}
+
+</section>
+{%- endmacro %}
+
+{% macro show(talk, this) %}
+  {% include talk + "/" + this + ".j2" %}
+{% endmacro %}
+
+{% macro loop(talk, slides, dev=False) %}
+{% for slide in slides %}
+  {% set prev=none if loop.first else this %}
+  {% set this=none if loop.first else next %}
+  {% set next=slide %}
+
+  {% if this %}
+    {% set focus=True if loop.index == 2 and not dev else False %}
+    {{ show(talk, this, prev, next, focus) }}
+  {% endif %}
+
+  {% if loop.last %}
+    {% set focus=True if dev else False %}
+    {% set prev=this %}
+    {% set this=next %}
+    {% set next=none %}
+
+    {{ show(talk, this, prev, next, focus) }}
+  {% endif %}
+
+{% endfor %}
+{% endmacro %}

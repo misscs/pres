@@ -1,0 +1,14 @@
+{% extends "slides/default.j2" %}
+
+{% import "utility.macros.j2" as u %}
+
+
+{% block h1 %}
+  Compass provides {{ u.accent('direction') }}
+{% endblock %}
+
+{% block slidebody -%}
+ {{ u.icon('compass') }}
+{%- endblock %}
+
+
