@@ -14,14 +14,5 @@
 .head {
   @extend %h1;
 
-  .amp {
-    @include font-size(amp);
-    position: relative;
-    display: inline-block;
-    margin: 0 -.25em;
-    vertical-align: middle;
-    z-index: -1;
-  }
-
   b { display: inline-block; }
 }

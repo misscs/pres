@@ -30,23 +30,23 @@ $focus: '&:hover, &:focus, &:active';
 // Headers
 // -------
 
-%h1 {
-  @include font-size(h1);
-  text-transform: uppercase;
-  font-weight: bold;
-}
-%h2 { @include font-size(h2); }
-%h3 { @include font-size(h3); }
-%h4 { @include font-size(line); }
+// %h1 {
+//   @include font-size(h1);
+//   text-transform: uppercase;
+//   font-weight: bold;
+// }
+// %h2 { @include font-size(h2); }
+// %h3 { @include font-size(h3); }
+// %h4 { @include font-size(line); }
 
-%h5, %h6 { font-weight: bold; }
+// %h5, %h6 { font-weight: bold; }
 
-%headers {
-  h1 { @extend %h1; }
-  h2 { @extend %h2; }
-  h3 { @extend %h3; }
-  h4 { @extend %h4; }
-}
+// %headers {
+//   h1 { @extend %h1; }
+//   h2 { @extend %h2; }
+//   h3 { @extend %h3; }
+//   h4 { @extend %h4; }
+// }
 
 
 // Body
@@ -83,6 +83,6 @@ $focus: '&:hover, &:focus, &:active';
 // ----
 
 %type {
-  @extend %headers;
-  @extend %body;
+  // @extend %headers;
+  // @extend %body;
 }
