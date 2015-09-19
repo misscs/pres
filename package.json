@@ -1,0 +1,40 @@
+{
+  "name": "pres",
+  "version": "1.0.0",
+  "description": "Small presentation framework from Oddbird",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misscs/pres.git"
+  },
+  "keywords": [
+    "sass",
+    "presentation",
+    "jinja"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/misscs/pres/issues"
+  },
+  "homepage": "https://github.com/misscs/pres#readme",
+  "devDependencies": {
+    "accoutrement-color": "^1.0.3",
+    "accoutrement-fonts": "^1.0.4",
+    "accoutrement-pseudo": "^1.0.2",
+    "accoutrement-reset": "^1.0.2",
+    "accoutrement-scale": "^1.0.7",
+    "browser-sync": "^2.9.3",
+    "eyeglass": "^0.6.2",
+    "gulp": "^3.9.0",
+    "gulp-data": "^1.2.0",
+    "gulp-nunjucks-html": "^2.0.0",
+    "gulp-nunjucks-render": "^1.0.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "susy": "^2.2.6"
+  }
+}
