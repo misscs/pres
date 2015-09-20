@@ -1,9 +1,12 @@
 {% extends "slides/title.j2" %}
 
+{% import "utility.macros.j2" as u %}
+
 {% block slide_classes %}vertical-center{% endblock %}
 
 {% block h1 %}
-  What makes something <b>revolutionary</b>?
+  {{ u.cursive('What makes something', 'display u-block') }}
+  {{ u.sans('revolutionary', 'slab u-block') }}
 {% endblock %}
 
 

@@ -1,0 +1,16 @@
+{% extends "slides/quote.j2" %}
+
+{% block slide_classes %}quote vertical-center{% endblock %}
+
+{% block quote %}
+<p>
+{{ u.sans(u.accent("Revolutions"), "text-first") }}
+{{ u.serif("don't happen when society adopts new technologies") }}
+{{ u.sans(u.accent("happen when society adopts new behaviors."), "text-last") }}
+
+</p>
+{% endblock %}
+
+{% block author %}
+  {{ u.byline('Clay Shirkey', 'Here Comes Everybody') }}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "slides/quote.j2" %}
+
+{% block slide_classes %}quote quote--left vertical-center{% endblock %}
+
+{% block quote %}
+<span class="first-line u-bold">The response has been enormous</span>
+
+  {{ u.accent("shows how badly", "u-sans u-block") }}
+  {{ u.accent("we want", "u-sans u-block") }}
+  {{ u.accent("a better library", "u-sans u-block") }}
+
+{% endblock %}
+
+
+{% block author %}
+  {{ u.byline(
+    "John Resig",
+    "first blog post jquery.com",
+    "January 24, 2006"
+  ) }}
+{% endblock %}

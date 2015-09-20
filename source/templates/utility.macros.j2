@@ -9,6 +9,7 @@
   <span data-icon="{{ icon }}"></span>
 {% endmacro %}
 
+
 {% macro iconic_block(title, year, classes=none)%}
 <div class="iconic iconic--{{ title|lower }} {{ classes }}">
   <h2 class="iconic-title"><span class="is-hidden">{{ title }}</span></h2>
@@ -16,18 +17,45 @@
 </div>
 {% endmacro %}
 
+
 {% macro established(year) %}
   <abbr title="Established">Est</abbr> {{ year }}
 {% endmacro %}
 
-{% macro accent(content) %}
-  <b>{{ content }}</b>
+
+{% macro accent(content, classes=none) %}
+  <b class="u-accent {{ classes }}">{{ content }}</b>
 {% endmacro %}
+
 
 {% macro abbr(title, content) %}
   <abbr title={{ title }}>{{ content }}</abbr>
 {% endmacro %}
 
+
 {% macro image(src, alt) %}
   <img src="../static/images/{{ src }}" title="{{ alt }}">
+{% endmacro %}
+
+
+{% macro serif(content, classes) %}
+  <span class="u-serif {{ classes }}">{{ content  }}</span>
+{% endmacro %}
+
+
+{% macro sans(content, classes) %}
+  <span class="u-sans {{ classes }}">{{ content }}</span>
+{% endmacro %}
+
+
+{% macro cursive(content, classes) %}
+  <span class="u-cursive {{ classes }}">{{ content  }}</span>
+{% endmacro %}
+
+
+{% macro byline(author, title, date) %}
+  <em class="quote-author">{{ author }}</em>, {{ title }}
+  {% if date %}
+    <time>{{ date }}</time>
+  {% endif %}
 {% endmacro %}

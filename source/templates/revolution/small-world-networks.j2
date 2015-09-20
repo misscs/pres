@@ -1,21 +1,8 @@
-{% extends "slides/default.j2" %}
-
-{% import "utility.macros.j2" as u %}
+{% extends "slides/flip-title.j2" %}
 
 {% block slide_classes %}vertical-center{% endblock %}
 
-{% block h1 %}
-  Small World Networks
-{% endblock %}
-{% block h2 %}{{ u.accent('Evolutionary advantageous') }}{% endblock %}
-
-{% block slidebody -%}
-
-  <ol>
-    <li>Resistant to Damage</li>
-    <li>Information dissemination</li>
-  </ol>
-
-{%- endblock %}
+{% block h1 %}{{ u.cursive("Small World Networks", "display") }}{% endblock %}
+{% block h2 %}{{ u.sans(u.accent('Evolutionary advantageous'), "slab") }}{% endblock %}
 
 

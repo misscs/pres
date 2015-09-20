@@ -1,13 +1,15 @@
 {% extends "slides/quote.j2" %}
 
-{% import "utility.macros.j2" as u %}
-
 {% block quote %}
- [The web] is the <b>largest human powered information network in history</b>. It has a culture,
- a history, and a social structure. <b>It's organic</b> and only problems of a region's development or a government's
- interference limit it...<b>It's uncontrolled</b>, even <b>out of control</b>,
+  <b>It's uncontrolled</b>, even <b>out of control</b>,
  and that's <b>its real power</b>.
 {% endblock %}
+
 {% block author %}
-  <em>Alfredo Lopez</em>, The Organic Internet
+  {{
+    u.byline(
+      "Alredo Lopez",
+      "The Organic Internet"
+    )
+  }}
 {% endblock %}
