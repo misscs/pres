@@ -7,3 +7,7 @@
 @import "fonts.config";
 @import "type.config";
 
+
+@include fonts;
+@include global-box-sizing;
+

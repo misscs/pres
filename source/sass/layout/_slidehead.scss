@@ -5,6 +5,10 @@
   margin-bottom: size(shim);
   text-align: center;
 
+  .left-center & {
+    text-align: left;
+  }
+
   &:last-child { margin-bottom: 0; }
 
   em { font-style: italic; }
@@ -15,4 +19,9 @@
   @extend %h1;
 
   b { display: inline-block; }
+}
+
+.subhead {
+  @extend %h2;
+  margin-bottom: size(gutter);
 }

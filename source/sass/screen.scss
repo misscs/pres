@@ -4,7 +4,15 @@
 @import "base/base";
 @import "base/root";
 
+
+@mixin margin-auto() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 @import "layout/slide";
+@import "layout/quote";
 @import "layout/slidenav";
 @import "layout/slidehead";
 @import "layout/slides";

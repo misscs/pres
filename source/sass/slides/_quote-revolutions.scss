@@ -1,0 +1,16 @@
+@include slide('quote-revolutions') {
+
+  .u-sans {
+    display: block;
+    line-height: 1;
+    text-align: left;
+  }
+
+  .text-first {
+    font-size: 2em;
+  }
+
+  .text-last {
+    font-size: 2.5em;
+  }
+}

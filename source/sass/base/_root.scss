@@ -2,7 +2,6 @@
 // ---------
 
 html {
-  @extend %sans;
   background: color(back);
   color: color(base);
   text-shadow: color(shadow) 0 1px 0;
@@ -19,13 +18,57 @@ html, body {
 // ----
 
 pre, code { @extend %code; }
+
 b { color: color(accent); }
 
-a {
-  #{$link} { @extend %link; }
-  #{$focus} { @extend %link-focus; }
+// a {
+//   #{$link} { @extend %link; }
+//   #{$focus} { @extend %link-focus; }
+// }
+
+.display {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  letter-spacing: 0.07em;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  white-space: nowrap;
 }
 
+.slab {
+  font-size: 1.5em;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+
+
+.u-serif {
+  @extend %serif;
+}
+
+.u-sans {
+  @extend %sans;
+}
+
+.u-cursive {
+  font-family: 'Great Vibes', cursive;
+}
+
+.u-inline {
+  display: inline-block;
+}
+
+.u-block {
+  display: block;
+}
+
+.u-bold {
+  font-weight: bold;
+}
+
+.u-accent {
+  color: color(accent);
+}
 
 // Utility
 // -------

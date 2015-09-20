@@ -1,0 +1,28 @@
+.quote {
+  @include margin-auto;
+  @extend %serif;
+  font-size: 4em;
+  max-width: 95vw;
+  text-transform: capitalize;
+  text-align: right;
+
+  .u-sans {
+    display: block;
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+
+  blockquote {
+    line-height: 1.3;
+    margin-botom: size(gutter);
+  }
+
+  footer {
+    @include font-size(normal);
+    font-style: italic;
+  }
+}
+
+.quote--left {
+  text-align: left;
+}

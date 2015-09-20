@@ -19,11 +19,11 @@ $fonts: (
     stack: (Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New'),
   ),
 
-  signika: (
-    name: Signika,
-    path: 'signika/signika-%s%s',
-    styles: (regular, bold, 500),
-    stack: (Tahoma, Helvetica, Arial, sans-serif)
+  serif: (
+    name: aleo,
+    path: 'aleo/aleo-%s%s',
+    styles: (regular, italic, bold, bolditalic),
+    stack: (Georgia, Times, serif)
   ),
 
   negative: (
@@ -34,10 +34,7 @@ $fonts: (
       semibold: 'signika/signikanegative-semibold'
       ),
     stack: (Tahoma, Helvetica, Arial, sans-serif)
-  ),
-
-  pres: (
-    name: 'pres',
-    files: (normal: 'icons/pres'),
   )
 );
+
+

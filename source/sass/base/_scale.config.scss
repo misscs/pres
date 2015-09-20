@@ -4,11 +4,29 @@
 $base-font-size: 32px;
 $ratio: major-third;
 
+// $font-sizes: (
+//   xlarge: 4,
+//   amp: 8,
+//   h1: 4,
+//   h2: 3,
+//   h3: 2,
+//   line: 1,
+//   normal: 0,
+//   small: -.5,
+//   smaller: -2,
+// );
+
+// $sizes: (
+//   column: 5,
+//   gutter: 1,
+//   shim: -2,
+// );
+
 $font-sizes: (
   xlarge: 4,
   amp: 8,
-  h1: 4,
-  h2: 3,
+  h1: 4em,
+  h2: 3.5em,
   h3: 2,
   line: 1,
   normal: 0,

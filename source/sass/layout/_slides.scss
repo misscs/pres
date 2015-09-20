@@ -84,15 +84,11 @@
   justify-content: center;
 }
 
-.quote {
-  blockquote {
-    // @include font-size(xlarge);
-  }
-  footer {
-    // @include font-size(normal);
-    font-style: italic;
-  }
+.left-center {
+  justify-content: center;
 }
+
+
 
 %code {
   @extend .vertical-center;
@@ -187,7 +183,7 @@ $code: ();
 
 @include slide('designed-for-resilience') {
   @extend .bg--cover;
-  background-image: url('../images/smallworldnetwork.png');
+  background-image: url('../images/evolutionary-advantageous.jpg');
 }
 
 @include slide('capabilities-opportunities', 'diptych');

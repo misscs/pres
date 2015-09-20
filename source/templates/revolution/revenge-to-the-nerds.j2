@@ -1,0 +1,22 @@
+{% extends "slides/default.j2" %}
+
+{% import "utility.macros.j2" as utility %}
+
+{% block slide_classes %}vertical-center{% endblock %}
+
+{% block h1 %}
+  Dork
+{% endblock %}
+
+{% block h1 %}
+  Hipsters
+{% endblock %}
+
+
+{% block slidebody %}
+
+  {{ utility.iconic_block('Hipster', '2005', 'pane') }}
+
+  {{ utility.iconic_block('Dork', '2008', 'pane') }}
+
+{% endblock %}

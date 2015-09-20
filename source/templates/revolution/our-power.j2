@@ -1,14 +1,14 @@
 {% extends "slides/quote.j2" %}
 
 {% block quote %}
-  <b>It's uncontrolled</b>, even <b>out of control</b>,
- and that's <b>its real power</b>.
+It's {{ u.sans("uncontrolled", "u-accent") }} even {{ u.sans("out of control", "u-accent") }}
+ that's its {{ u.sans("real power", "u-accent") }}
 {% endblock %}
 
 {% block author %}
   {{
     u.byline(
-      "Alredo Lopez",
+      "Alfredo Lopez",
       "The Organic Internet"
     )
   }}

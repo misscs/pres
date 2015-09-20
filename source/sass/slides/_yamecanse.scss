@@ -1,0 +1,24 @@
+@include slide('yamecanse') {
+  background-image: url('../images/yamecanse.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  a {
+    color: color(back);
+  }
+
+}
+
+@include slide('calling-for-change') {
+  background-image: url('../images/blacklivesmatter.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1 {
+    display: none;
+  }
+
+  a {
+    color: color(back);
+  }
+}
