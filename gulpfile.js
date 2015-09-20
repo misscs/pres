@@ -24,7 +24,7 @@ gulp.task('serve', ['sass'], function() {
   });
 
   gulp.watch("./source/templates/**/*", ['nunjucks']);
-  gulp.watch("./source/sass/*.scss", ['sass']);
+  gulp.watch("./source/sass/**/*.scss", ['sass']);
   gulp.watch("./rendered/index.html").on('change', reload);
 
 });
