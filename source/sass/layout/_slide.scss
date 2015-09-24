@@ -7,21 +7,21 @@
   // float: left;
   height: 100vh;
   // margin-right: -1000%;
-  // opacity: 0;
+  opacity: 1;
   overflow-x: scroll;
   overflow-y: scroll;
   position: relative;
-  width: 100%vw;
+  width: 100vw;
 }
 
-// [id^="toggle-slide-"] {
-//   @include is-toggle {
-//     + .slide {
-//       opacity: 1;
-//       z-index: 100;
-//     }
-//   }
-// }
+[id^="toggle-slide-"] {
+  @include is-toggle {
+    + .slide {
+      opacity: 1;
+      z-index: 100;
+    }
+  }
+}
 
 .credit {
   // @include font-size(smaller);

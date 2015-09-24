@@ -1,0 +1,22 @@
+@include slide('whats-revolutionary') {
+  background-image: url('../images/revolutionary.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .head {
+    color: color(back);
+    height: 100vh;
+
+    .u-block {
+      background: color(black);
+      width: 100vw;
+    }
+
+    .slab {
+      position: absolute;
+      bottom: 0;
+    }
+
+  }
+
+}

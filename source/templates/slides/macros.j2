@@ -1,5 +1,6 @@
-{% macro pre(name, focus, slide_classes=none) -%}
-  <input type="radio" id="toggle-slide-{{ name }}" name="slide-toggles" {% if focus %}checked autofocus{% endif %} />
+{% macro pre(name, focus) -%}
+  <input type="radio" id="toggle-slide-{{ name }}" name="slide-toggles" {% if focus %}checked autofocus{% endif %}>
+  <section class="slide" data-toggle="{{ name }}">
 {%- endmacro %}
 
 {% macro post(name, prev=False, next=False) -%}
@@ -19,14 +20,12 @@
     <span class="alt-text">next</span>
   </label>
   {% endif %}
-
+</nav>
 </section>
 {%- endmacro %}
 
 {% macro show(talk, this) %}
-  <section class="slide" data-toggle="{{ this }}">
-    {% include talk + "/" + this + ".j2" %}
-  </section>
+  {% include talk + "/" + this + ".j2" %}
 {% endmacro %}
 
 {% macro loop(talk, slides, dev=False) %}
@@ -37,7 +36,10 @@
 
     {% if this %}
       {% set focus=True if loop.index == 2 and not dev else False %}
+
+      {{ pre(this, focus) }}
       {{ show(talk, this, prev, next, focus) }}
+      {{ post(this, prev, next) }}
     {% endif %}
 
     {% if loop.last %}
@@ -46,7 +48,10 @@
       {% set this=next %}
       {% set next=none %}
 
+      {{ pre(this, focus) }}
       {{ show(talk, this, prev, next, focus) }}
+      {{ post(this, prev, next) }}
+
     {% endif %}
 
   {% endfor %}

@@ -21,6 +21,10 @@
 
 }
 
+.slidewrap--full-bleed {
+  padding: 0;
+}
+
 // Classes for building slides
 // all classes build on .slidewrap
 
@@ -58,6 +62,8 @@
 
   &-8 .pane {
     flex: 1 1 25%;
+    height: 50vh;
+    padding: 2.5em;
   }
 }
 
@@ -88,12 +94,16 @@
   justify-content: center;
 }
 
+.full-bleed {
+  padding: 0;
+}
 
 
 %code {
   @extend .vertical-center;
   text-align: center;
 }
+
 
 %diptych {
   .slidewrap {
@@ -298,51 +308,58 @@ $code: ();
 }
 
 $iconic: (
-  'angular': 'angular.png',
+  'angular': 'angular.png' 'light',
   'bem': 'bem.svg',
   'bourbon': 'bourbon.png',
-  'bower': 'bower.png',
+  'bower': 'bower.png' red,
   'breakpoint': 'breakpoint.png',
   'broccolijs': 'broccolijs.png',
   'coffeescript': 'coffeescript.png',
-  'dhtmlx': 'dhtmlx.jpeg',
-  'dojo': 'dojo.svg',
-  'ember': 'ember.png',
-  'extjs': 'extjs.jpeg',
+  'dhtmlx': 'dhtmlx.jpeg' orange,
+  'dojo': 'dojo.svg' pink,
+  'ember': 'ember.png' orange,
+  'extjs': 'extjs.jpeg' blue,
   'git': 'git.png',
   'github': 'github.png',
   'gobblejs': 'gobblejs.png',
-  'grunt': 'grunt.png',
-  'gulp': 'gulp.png',
+  'grunt': 'grunt.png' orange,
+  'gulp': 'gulp.png' pink,
   'harpjs': 'harpjs.svg',
   'jekyll': 'jekyll.png',
-  'jquery': 'jquery-badge.png',
+  'jquery': 'jquery-badge.png' blue,
   'less': 'less.png',
   'meteorjs': 'meteorjs.png',
-  'mootools': 'mootools.png',
+  'mootools': 'mootools.png' grey,
   'mythcss': 'myth.jpg',
-  'nodejs': 'nodejs.svg.png',
+  'nodejs': 'nodejs.svg.png' green,
   'octopress': 'octopress.png',
   'oocss': 'oocss.jpg',
-  'prototype': 'prototype.jpg',
+  'prototype': 'prototype.jpg' orange,
   'reworkcss': 'rework.gif',
   'rwd': 'rwd.png',
-  'sass': 'sass.png',
+  'sass': 'sass.png' blue,
   'smacss': 'smacss.png',
-  'scriptaculous': 'scriptaculous-light.png',
+  'scriptaculous': 'scriptaculous-light.png' green,
   'susy': 'susy.svg',
   'stylus': 'stylus.png',
   'turbine': 'turbine.png',
   'yeoman': 'yeoman.png',
-  'yui': 'yuilib.jpg'
+  'yui': 'yuilib.jpg' purple
 
 );
 
 
-@each $tool, $logo in $iconic {
+@each $tool, $detail in $iconic {
+  $logo: nth($detail, 1);
+  $color: if(length($detail) > 1, nth($detail, 2), false);
+
   .iconic--#{$tool} {
     .iconic-title {
       background-image: url('../images/logos/#{$logo}');
+    }
+
+    @if $color {
+      background-color: color($color);
     }
   }
 }

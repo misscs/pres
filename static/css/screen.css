@@ -53,6 +53,15 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block; }
 
+.alt-text,
+.is-hidden, [data-toggle="make-shit-up"] .head, [data-toggle="colophon"] .head, .iconic-title span {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px 1px 1px 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px; }
+
 .head {
   font-size: 5.0625rem;
   line-height: 5.25rem;
@@ -103,12 +112,6 @@ pre, code {
   font-style: normal;
   font-weight: bold;
   src: url("../fonts/aleo/aleo-bold.woff") format("woff"); }
-
-@font-face {
-  font-family: "aleo";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/bolditalic.woff") format("woff"); }
 
 .u-serif, .quote {
   font-family: aleo, Georgia, Times, serif; }
@@ -175,10 +178,22 @@ b {
 .slide {
   counter-increment: slide;
   height: 100vh;
+  opacity: 1;
   overflow-x: scroll;
   overflow-y: scroll;
   position: relative;
-  width: 100%vw; }
+  width: 100vw; }
+
+[id^="toggle-slide-"] {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px 1px 1px 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px; }
+  [id^="toggle-slide-"]:checked + .slide {
+    opacity: 1;
+    z-index: 100; }
 
 .credit {
   background: rgba(252, 252, 252, 0.5);
@@ -271,6 +286,20 @@ b {
 .subhead {
   margin-bottom: 1.5rem; }
 
+[data-toggle="whats-revolutionary"] {
+  background-image: url("../images/revolutionary.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  [data-toggle="whats-revolutionary"] .head {
+    color: #fcfcfc;
+    height: 100vh; }
+    [data-toggle="whats-revolutionary"] .head .u-block {
+      background: black;
+      width: 100vw; }
+    [data-toggle="whats-revolutionary"] .head .slab {
+      position: absolute;
+      bottom: 0; }
+
 [data-toggle="quote-revolutions"] .u-sans {
   display: block;
   line-height: 1;
@@ -316,6 +345,9 @@ b {
   .slidewrap .slidebody {
     text-align: center; }
 
+.slidewrap--full-bleed {
+  padding: 0; }
+
 .stacked .list {
   display: flex;
   flex-direction: column; }
@@ -338,7 +370,9 @@ b {
   .grid-4 .pane {
     flex: 1 1 50%; }
   .grid-8 .pane {
-    flex: 1 1 25%; }
+    flex: 1 1 25%;
+    height: 50vh;
+    padding: 2.5em; }
 
 .bg--cover,
 [data-toggle="designed-for-resilience"], [data-toggle="sassy-capabilities"] .iconic--sache, .image--cover, .bg--contain,
@@ -365,6 +399,9 @@ b {
 
 .left-center {
   justify-content: center; }
+
+.full-bleed {
+  padding: 0; }
 
 pre, code {
   text-align: center; }
@@ -451,8 +488,10 @@ pre, code {
   height: 210px;
   background-position: 50% 50%; }
 
-.iconic--angular .iconic-title {
-  background-image: url("../images/logos/angular.png"); }
+.iconic--angular {
+  background-color: #857282; }
+  .iconic--angular .iconic-title {
+    background-image: url("../images/logos/angular.png"); }
 
 .iconic--bem .iconic-title {
   background-image: url("../images/logos/bem.svg"); }
@@ -460,8 +499,10 @@ pre, code {
 .iconic--bourbon .iconic-title {
   background-image: url("../images/logos/bourbon.png"); }
 
-.iconic--bower .iconic-title {
-  background-image: url("../images/logos/bower.png"); }
+.iconic--bower {
+  background-color: red; }
+  .iconic--bower .iconic-title {
+    background-image: url("../images/logos/bower.png"); }
 
 .iconic--breakpoint .iconic-title {
   background-image: url("../images/logos/breakpoint.png"); }
@@ -472,17 +513,25 @@ pre, code {
 .iconic--coffeescript .iconic-title {
   background-image: url("../images/logos/coffeescript.png"); }
 
-.iconic--dhtmlx .iconic-title {
-  background-image: url("../images/logos/dhtmlx.jpeg"); }
+.iconic--dhtmlx {
+  background-color: orange; }
+  .iconic--dhtmlx .iconic-title {
+    background-image: url("../images/logos/dhtmlx.jpeg"); }
 
-.iconic--dojo .iconic-title {
-  background-image: url("../images/logos/dojo.svg"); }
+.iconic--dojo {
+  background-color: pink; }
+  .iconic--dojo .iconic-title {
+    background-image: url("../images/logos/dojo.svg"); }
 
-.iconic--ember .iconic-title {
-  background-image: url("../images/logos/ember.png"); }
+.iconic--ember {
+  background-color: orange; }
+  .iconic--ember .iconic-title {
+    background-image: url("../images/logos/ember.png"); }
 
-.iconic--extjs .iconic-title {
-  background-image: url("../images/logos/extjs.jpeg"); }
+.iconic--extjs {
+  background-color: blue; }
+  .iconic--extjs .iconic-title {
+    background-image: url("../images/logos/extjs.jpeg"); }
 
 .iconic--git .iconic-title {
   background-image: url("../images/logos/git.png"); }
@@ -493,11 +542,15 @@ pre, code {
 .iconic--gobblejs .iconic-title {
   background-image: url("../images/logos/gobblejs.png"); }
 
-.iconic--grunt .iconic-title {
-  background-image: url("../images/logos/grunt.png"); }
+.iconic--grunt {
+  background-color: orange; }
+  .iconic--grunt .iconic-title {
+    background-image: url("../images/logos/grunt.png"); }
 
-.iconic--gulp .iconic-title {
-  background-image: url("../images/logos/gulp.png"); }
+.iconic--gulp {
+  background-color: pink; }
+  .iconic--gulp .iconic-title {
+    background-image: url("../images/logos/gulp.png"); }
 
 .iconic--harpjs .iconic-title {
   background-image: url("../images/logos/harpjs.svg"); }
@@ -505,8 +558,10 @@ pre, code {
 .iconic--jekyll .iconic-title {
   background-image: url("../images/logos/jekyll.png"); }
 
-.iconic--jquery .iconic-title {
-  background-image: url("../images/logos/jquery-badge.png"); }
+.iconic--jquery {
+  background-color: blue; }
+  .iconic--jquery .iconic-title {
+    background-image: url("../images/logos/jquery-badge.png"); }
 
 .iconic--less .iconic-title {
   background-image: url("../images/logos/less.png"); }
@@ -514,14 +569,18 @@ pre, code {
 .iconic--meteorjs .iconic-title {
   background-image: url("../images/logos/meteorjs.png"); }
 
-.iconic--mootools .iconic-title {
-  background-image: url("../images/logos/mootools.png"); }
+.iconic--mootools {
+  background-color: grey; }
+  .iconic--mootools .iconic-title {
+    background-image: url("../images/logos/mootools.png"); }
 
 .iconic--mythcss .iconic-title {
   background-image: url("../images/logos/myth.jpg"); }
 
-.iconic--nodejs .iconic-title {
-  background-image: url("../images/logos/nodejs.svg.png"); }
+.iconic--nodejs {
+  background-color: green; }
+  .iconic--nodejs .iconic-title {
+    background-image: url("../images/logos/nodejs.svg.png"); }
 
 .iconic--octopress .iconic-title {
   background-image: url("../images/logos/octopress.png"); }
@@ -529,8 +588,10 @@ pre, code {
 .iconic--oocss .iconic-title {
   background-image: url("../images/logos/oocss.jpg"); }
 
-.iconic--prototype .iconic-title {
-  background-image: url("../images/logos/prototype.jpg"); }
+.iconic--prototype {
+  background-color: orange; }
+  .iconic--prototype .iconic-title {
+    background-image: url("../images/logos/prototype.jpg"); }
 
 .iconic--reworkcss .iconic-title {
   background-image: url("../images/logos/rework.gif"); }
@@ -538,14 +599,18 @@ pre, code {
 .iconic--rwd .iconic-title {
   background-image: url("../images/logos/rwd.png"); }
 
-.iconic--sass .iconic-title {
-  background-image: url("../images/logos/sass.png"); }
+.iconic--sass {
+  background-color: blue; }
+  .iconic--sass .iconic-title {
+    background-image: url("../images/logos/sass.png"); }
 
 .iconic--smacss .iconic-title {
   background-image: url("../images/logos/smacss.png"); }
 
-.iconic--scriptaculous .iconic-title {
-  background-image: url("../images/logos/scriptaculous-light.png"); }
+.iconic--scriptaculous {
+  background-color: green; }
+  .iconic--scriptaculous .iconic-title {
+    background-image: url("../images/logos/scriptaculous-light.png"); }
 
 .iconic--susy .iconic-title {
   background-image: url("../images/logos/susy.svg"); }
@@ -559,8 +624,10 @@ pre, code {
 .iconic--yeoman .iconic-title {
   background-image: url("../images/logos/yeoman.png"); }
 
-.iconic--yui .iconic-title {
-  background-image: url("../images/logos/yuilib.jpg"); }
+.iconic--yui {
+  background-color: purple; }
+  .iconic--yui .iconic-title {
+    background-image: url("../images/logos/yuilib.jpg"); }
 
 .c {
   color: #d6d0d5;

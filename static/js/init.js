@@ -24,6 +24,7 @@ var PRES = (function (PRES, $) {
     };
 
     $(function () {
+
         var radios = $('input[type="radio"][name="slide-toggles"]');
 
         $(document).on('keydown', function (e) {
@@ -35,10 +36,12 @@ var PRES = (function (PRES, $) {
             var right = (e.keyCode === PRES.keycodes.RIGHT ||
                 e.keyCode === PRES.keycodes.DOWN) &&
                 !radios.filter(':focus').length;
+
             if (left || right || pageUp || pageDown) {
                 var selected = radios.filter(':checked');
                 var selectedIndex = radios.index(selected);
                 var newRadio;
+
                 if ((left || pageUp) && selectedIndex > 0) {
                     newRadio = radios.eq(selectedIndex - 1);
                     if (newRadio.length) {
