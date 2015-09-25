@@ -1,11 +1,10 @@
 {% extends "slides/title.j2" %}
 
-{% import "utility.macros.j2" as u %}
-
 {% block slide_classes %}vertical-center{% endblock %}
 
 {% block h1 %}
-<b>Totally disrupts the established order</b>
+  {{ u.sans('Totally disrupts', 'slab u-block u-accent') }}
+  {{ u.cursive('the established order', 'display u-block')}}
 {% endblock %}
 
 

@@ -1,13 +1,11 @@
 {% extends "slides/default.j2" %}
 
-{% import "utility.macros.j2" as utility %}
-
 {% block slide_classes %}vertical-center{% endblock %}
 
+
 {% block h1 %}
-  Status of our stylesheets
+  {{ u.cursive("Status of our stylesheets", "display") }}
 {% endblock %}
-{% block h2 %}{% endblock %}
 
 {% block slidebody %}
   <ul>

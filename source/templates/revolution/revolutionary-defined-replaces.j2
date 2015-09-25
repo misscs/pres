@@ -1,11 +1,13 @@
 {% extends "slides/title.j2" %}
 
-{% import "utility.macros.j2" as u %}
-
 {% block slide_classes %}vertical-center{% endblock %}
 
 {% block h1 %}
-<b class="hook">replacing the established order with a new order</b>
+  {{ u.sans('replacing the', 'u-block u-accent') }}
+  {{ u.cursive('established order', 'u-block')}}
+  {{ u.sans('with a new order', 'u-block u-accent') }}
 {% endblock %}
+
+
 
 

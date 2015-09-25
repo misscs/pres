@@ -1,20 +1,23 @@
 {% extends "slides/default.j2" %}
 
-{% import "utility.macros.j2" as u %}
-
-{% block h2 %}Motivation Ability Trigger</a>{% endblock %}
 {% block h1 %}
-<b>
-  {{ u.abbr('Behavior', 'b')}}
-  <span class="equals">=</span>
-  {{ u.abbr('Motivation', 'm')}}
-  {{ u.abbr('Ability', 'a')}}
-  {{ u.abbr('Trigger', 't')}}
-</b>
+  {{ u.sans('Behavior', 'slab') }}
 {% endblock %}
 
 {% block slidebody -%}
+  <span class="u-sans u-block">
+    <span class="u-accent">M</span><span class="">otivation</span>
+    <span class="u-serif times">x</span>
+  </span>
 
+  <span class="u-sans u-block">
+    <span class="u-accent">A</span><span class="">bility</span>
+    <span class="u-serif times">x</span>
+  </span>
 
-<a href="http://www.behaviormodel.org/">Fogg Behavior Model</a>
+  <span class="u-sans u-block">
+    <span class="u-accent">T</span><span class="">rigger</span>
+    <span class="u-serif times">=</span>
+  </span>
+
 {%- endblock %}

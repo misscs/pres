@@ -1,0 +1,10 @@
+@include slide('sup-css') {
+  background: color(black);
+  color: color(back);
+}
+
+
+@include slide('game-changer') {
+  background-color: color(pink);
+  background-image: url('../images/logos/sass.png');
+}

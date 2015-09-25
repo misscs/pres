@@ -13,13 +13,14 @@
   flex-direction: column;
   padding: 1.5rem;
   height: 100vh;
-
-  .slidebody {
-    @extend %type;
-    text-align: center;
-  }
-
 }
+
+
+.slidebody {
+  @extend %type;
+  text-align: center;
+}
+
 
 .slidewrap--full-bleed {
   padding: 0;
@@ -66,6 +67,7 @@
     padding: 2.5em;
   }
 }
+
 
 // Slides with images
 
@@ -159,13 +161,6 @@ $code: ();
 }
 
 
-@include slide('revolutionary-defined') {
-  .hook {
-    white-space: nowrap;
-    color: inherit;
-  }
-}
-
 @include slide('jquery-community-rising') {
   blockquote {
     // @include font-size(h1);
@@ -198,31 +193,6 @@ $code: ();
 
 @include slide('capabilities-opportunities', 'diptych');
 
-@include slide('whats-behavior') {
-  background-image: url('../images/whatifitoldyou.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  .slidehead {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    height: 100vh;
-  }
-
-  .subhead {
-    margin-top: auto;
-  }
-
-}
-
-@include slide('bmat') {
-
-  .slidewrap {
-    @extend .bg--contain;
-    background-image: url('../images/bmat.png');
-  }
-}
 
 @include slide('mobile-power') {
   background: url('../images/first-iphone.jpg');
@@ -239,6 +209,7 @@ $code: ();
     margin-top: auto;
   }
 }
+
 
 @include slide('sassy-capabilities') {
   .iconic--sache {

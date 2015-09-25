@@ -1,0 +1,43 @@
+.slide {
+  display: block;
+}
+
+
+@include slide('whats-behavior') {
+  background-image: url('../images/whats-behavior.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: black;
+  background-position: 300px 70px;
+
+  .slidehead {
+    text-align: left;
+    color: white;
+    padding-top: 3em;
+    padding-left: 2em;
+  }
+}
+
+
+@include slide('bmat') {
+
+  .slidebody,
+  .head {
+    text-align: left;
+  }
+
+  .times {
+    font-size: 3rem;
+  }
+
+  .slidehead {
+    order: 2;
+  }
+
+  .slidebody {
+    font-size: 8rem;
+    line-height: 9rem;
+  }
+
+
+}

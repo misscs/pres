@@ -1,13 +1,11 @@
 {% extends "slides/default.j2" %}
 
-{% import "utility.macros.j2" as u %}
-
 {% block slide_classes %}vertical-center{% endblock %}
 
 {% block h1 %}
-  An invitation to {{ u.accent('participate') }}
+  {{ u.sans('An invitation to') }}
+  {{ u.sans('participate', 'u-accent') }}
 {% endblock %}
-{% block h2 %}(motivation and trigger){% endblock %}
 
 {% block slidebody -%}
 {%- endblock %}

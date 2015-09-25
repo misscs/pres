@@ -144,7 +144,8 @@ html, body {
   height: 100vh;
   width: 100vw; }
 
-b {
+b,
+.u-accent {
   color: red; }
 
 .display {
@@ -174,6 +175,18 @@ b {
 
 .u-accent {
   color: red; }
+
+.u-titlize {
+  text-transform: capitalize; }
+
+.u-majuscula {
+  text-transform: uppercase; }
+
+.u-minuscula {
+  text-transform: lowercase; }
+
+.u-strikeout {
+  text-decoration: line-through; }
 
 .slide {
   counter-increment: slide;
@@ -337,13 +350,51 @@ b {
   [data-toggle="calling-for-change"] a {
     color: #fcfcfc; }
 
+.slide {
+  display: block; }
+
+[data-toggle="whats-behavior"] {
+  background-image: url("../images/whats-behavior.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: black;
+  background-position: 300px 70px; }
+  [data-toggle="whats-behavior"] .slidehead {
+    text-align: left;
+    color: white;
+    padding-top: 3em;
+    padding-left: 2em; }
+
+[data-toggle="bmat"] .slidebody,
+[data-toggle="bmat"] .head {
+  text-align: left; }
+
+[data-toggle="bmat"] .times {
+  font-size: 3rem; }
+
+[data-toggle="bmat"] .slidehead {
+  order: 2; }
+
+[data-toggle="bmat"] .slidebody {
+  font-size: 8rem;
+  line-height: 9rem; }
+
+[data-toggle="sup-css"] {
+  background: black;
+  color: #fcfcfc; }
+
+[data-toggle="game-changer"] {
+  background-color: pink;
+  background-image: url("../images/logos/sass.png"); }
+
 .slidewrap {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
   height: 100vh; }
-  .slidewrap .slidebody {
-    text-align: center; }
+
+.slidebody {
+  text-align: center; }
 
 .slidewrap--full-bleed {
   padding: 0; }
@@ -376,7 +427,7 @@ b {
 
 .bg--cover,
 [data-toggle="designed-for-resilience"], [data-toggle="sassy-capabilities"] .iconic--sache, .image--cover, .bg--contain,
-[data-toggle="bmat"] .slidewrap, [data-toggle="whats-the-point"], [data-toggle="colophon"], .iconic-title, .image--contain {
+[data-toggle="whats-the-point"], [data-toggle="colophon"], .iconic-title, .image--contain {
   background-repeat: no-repeat; }
 
 .bg--cover,
@@ -386,7 +437,6 @@ b {
   background-size: cover; }
 
 .bg--contain,
-[data-toggle="bmat"] .slidewrap,
 [data-toggle="whats-the-point"],
 [data-toggle="colophon"],
 .iconic-title,
@@ -428,27 +478,8 @@ pre, code {
     .two-up .highlight + .highlight {
       border-left: 1px dotted rgba(52, 19, 47, 0.25); }
 
-[data-toggle="revolutionary-defined"] .hook {
-  white-space: nowrap;
-  color: inherit; }
-
 [data-toggle="designed-for-resilience"] {
   background-image: url("../images/evolutionary-advantageous.jpg"); }
-
-[data-toggle="whats-behavior"] {
-  background-image: url("../images/whatifitoldyou.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; }
-  [data-toggle="whats-behavior"] .slidehead {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    height: 100vh; }
-  [data-toggle="whats-behavior"] .subhead {
-    margin-top: auto; }
-
-[data-toggle="bmat"] .slidewrap {
-  background-image: url("../images/bmat.png"); }
 
 [data-toggle="mobile-power"] {
   background: url("../images/first-iphone.jpg");

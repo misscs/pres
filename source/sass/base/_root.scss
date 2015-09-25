@@ -19,7 +19,8 @@ html, body {
 
 pre, code { @extend %code; }
 
-b { color: color(accent); }
+b,
+.u-accent { color: color(accent); }
 
 // a {
 //   #{$link} { @extend %link; }
@@ -46,28 +47,53 @@ b { color: color(accent); }
   @extend %serif;
 }
 
+
 .u-sans {
   @extend %sans;
 }
+
 
 .u-cursive {
   font-family: 'Great Vibes', cursive;
 }
 
+
 .u-inline {
   display: inline-block;
 }
+
 
 .u-block {
   display: block;
 }
 
+
 .u-bold {
   font-weight: bold;
 }
 
+
 .u-accent {
   color: color(accent);
+}
+
+
+.u-titlize {
+  text-transform: capitalize;
+}
+
+
+.u-majuscula {
+  text-transform: uppercase;
+}
+
+
+.u-minuscula {
+  text-transform: lowercase;
+}
+
+.u-strikeout {
+  text-decoration: line-through;
 }
 
 // Utility

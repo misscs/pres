@@ -1,17 +1,10 @@
 {% extends "slides/default.j2" %}
 
-{% import "utility.macros.j2" as u %}
-
 {% block slide_classes %}vertical-center{% endblock %}
 
-
 {% block h1 %}
-  {{ u.accent('Simple') }} solution
+  {{ u.sans('Simple', 'u-accent') }}
+  {{ u.sans('solution') }}
 {% endblock %}
-{% block h2 %}(ability){% endblock %}
-
-{% block slidebody -%}
-
-{%- endblock %}
 
 

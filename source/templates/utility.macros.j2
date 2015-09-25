@@ -38,6 +38,11 @@
 {% endmacro %}
 
 
+{% macro eimage(src, alt) %}
+  <img src="{{ src }}" title="{{ alt }}">
+{% endmacro %}
+
+
 {% macro serif(content, classes) %}
   <span class="u-serif {{ classes }}">{{ content  }}</span>
 {% endmacro %}

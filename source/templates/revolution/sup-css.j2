@@ -1,12 +1,16 @@
 {% extends "slides/default.j2" %}
 
-{% import "utility.macros.j2" as u %}
-
+{% block slide_classes %}vertical-center{% endblock %}
 
 {% block h1 %}
-  CSS is <b>PAINFUL</b>
+  {{ u.sans('CSS ') }}
+  {{ u.sans('is') }}
+  {{ u.sans('PAINFUL', 'u-accent') }}
 {% endblock %}
-{% block h2 %}Circa 2007{% endblock %}
+
+{% block h2 %}
+  {{ u.serif('circa 2007') }}
+{% endblock %}
 
 {% block slidebody -%}
   {{ u.image('css.gif', "Animated GIF. CSS as complex as opening blinds")}}
